@@ -94,6 +94,17 @@ Additional statements can be added here
 + Click security credential
 + Create access key
 + tick CLI and check mark the terms and click next
-+ Finally click the 'Create Acces key"
++ Finally click the 'Create Access key"
   + What happened if permission is removed
   => The answer is no respond is shown because permission is denied
+
+
+#### AWS Cloudshell
+  It allows to run CLI cmd directly from the browser without needing to install and configure any software on your local machine.
+
+#### IAM roles for services
++  some AWS service will need to pergform action on your behalf
++  to do so, we will assign permission to AWS service with IAM roles
++  common roles: EC2 instance role
+               : Lambda function roles
+               : Role for cloud formation  
