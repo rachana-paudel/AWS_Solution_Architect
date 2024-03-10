@@ -108,3 +108,14 @@ Additional statements can be added here
 +  common roles: EC2 instance role
                : Lambda function roles
                : Role for cloud formation  
+
+
++ Steps for IAM roles
+  + Click 'User' and then choose the user let say 'Rachana'
+  + Click Roles then create roles
+  + Choose AWS service               
+  + Use case: EC2
+  + Click 'next'
+  + Set Role name: 'DemoEC2
+  + Create role
+  
