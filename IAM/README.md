@@ -10,7 +10,7 @@ Owner create a root and donot share it to others. User need permission to get ac
 + In AWS you apply leave privilege principle don't give more permission than a user needs.
 
 The format of JSON documents looks like the following:
-{
+<!-- {
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -25,4 +25,4 @@ The format of JSON documents looks like the following:
     }
     // Additional statements can be added here
   ]
-}
+} -->
