@@ -1,9 +1,9 @@
-### Associate Identity Acess Management(IAM)
+## Associate Identity Acess Management(IAM)
 
-#### IAM is one of the global services of AWS Cloud.
+### IAM is one of the global services of AWS Cloud.
 Owner create a root and donot share it to others. User need permission to get access of services like EC2, VPC etc.
 
-##### IAM Permission
+#### IAM Permission
 + To allow the services
 + User or group can be assign JSON document called policies.
 + These policies define permission of the users.
