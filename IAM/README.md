@@ -88,3 +88,12 @@ Additional statements can be added here
       + mobile SDKs(android, ios)
       + IOT device (embedded C, Arduino)
       + SDKs(JS, python, PHP)
+
+#### CLI setup on Windows
++ click on username of the account on right side
++ Click security credential
++ Create access key
++ tick CLI and check mark the terms and click next
++ Finally click the 'Create Acces key"
+  + What happened if permission is removed
+  => The answer is no respond is shown because permission is denied
