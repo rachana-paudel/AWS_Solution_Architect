@@ -73,3 +73,9 @@ Additional statements can be added here
     + User manage their own access keys
     + Access keys are secret just like a password so don't share them
     + Access key IS ~=username and secret key ID ~=password
+
+2.  AWS Command Line Interface (CLI)
+    + It is tool that enables you to interact AWS services using commands in your command Line Shell
+    + Direct access to the public APIs of AWS services
+    + You can develop scropts to manage your resources
+    + Alternative to AWS Management Console.
