@@ -66,3 +66,10 @@ Additional statements can be added here
 #### Multifactor Authentication
 + User can change,delete resource to protect root and IAM users
 + MFA= password we know + security devices like Google authenticator(For virtaul) and Universal 2F authentication where physical device is used.
+
+#### How can user access AWS?
+1.  Management Console
+    + Access keys are generated through AWS Console
+    + User manage their own access keys
+    + Access keys are secret just like a password so don't share them
+    + Access key IS ~=username and secret key ID ~=password
