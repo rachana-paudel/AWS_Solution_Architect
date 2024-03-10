@@ -119,3 +119,11 @@ Additional statements can be added here
   + Set Role name: 'DemoEC2
   + Create role
   
+
+#### IAM Security tools
++ IAM credentials report ( account level)
+  -> A report that list all your account users and the status of their various credentials
+
++ IAM Access Advisor (user level)
+  -> It shows the service permissions granted to user and when those service were last accessed
+  -> You can use this information to revise your policies.    
