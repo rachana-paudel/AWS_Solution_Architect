@@ -79,3 +79,12 @@ Additional statements can be added here
     + Direct access to the public APIs of AWS services
     + You can develop scropts to manage your resources
     + Alternative to AWS Management Console.
+
+3.  AWS Softwate Development kit (SDK)
+    + language specific API
+    + enables to access and manage AWS service programming
+    + embedded within your application
+    + supports
+      + mobile SDKs(android, ios)
+      + IOT device (embedded C, Arduino)
+      + SDKs(JS, python, PHP)
