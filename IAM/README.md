@@ -38,3 +38,20 @@ Additional statements can be added here
   ]
 }
 
+#### Steps for IAM Policies
++ For root user
+    + Go to IAM and click 'Users'
+    + Click 'Groups'
+    + Click on Group name: admin
+    + Remove that name
+    + Click on IAM and users
+    + Make new Users and add permission to that users
+    + Click IAMReadonly or something
+    + Click User group and create a group
+    + set name : developers
+    + policy: choose any
+    + Choose 'Create group'
+    + Click Amin group then choose user
+    + Choose the Name created before
+    + Add user
+
