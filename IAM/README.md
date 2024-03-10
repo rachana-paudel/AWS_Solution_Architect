@@ -8,3 +8,21 @@ Owner create a root and donot share it to others. User need permission to get ac
 + User or group can be assign JSON document called policies.
 + These policies define permission of the users.
 + In AWS you apply leave privilege principle don't give more permission than a user needs.
+
+The format of JSON documents looks like the following:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow or Deny",
+      "Action": "Action(s)",
+      "Resource": "Resource(s)"
+    },
+    {
+      "Effect": "Allow or Deny",
+      "Action": "Action(s)",
+      "Resource": "Resource(s)"
+    }
+    // Additional statements can be added here
+  ]
+}
