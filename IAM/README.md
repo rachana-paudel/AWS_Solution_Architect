@@ -1,7 +1,7 @@
-## Associate Identity Acess Management(IAM)
+## Associate Identity Access Management(IAM)
 
 ### IAM is one of the global services of AWS Cloud.
-Owner create a root and donot share it to others. User need permission to get access of services like EC2, VPC etc.
+Owner create a root and do not share it to others. User need permission to get access of services like EC2, VPC etc.
 
 #### IAM Permission
 + To allow the services
@@ -46,7 +46,7 @@ Additional statements can be added here
     + Remove that name
     + Click on IAM and users
     + Make new Users and add permission to that users
-    + Click IAMReadonly or something
+    + Click 'IAMReadonly' or something
     + Click User group and create a group
     + set name : developers
     + policy: choose any
@@ -54,4 +54,6 @@ Additional statements can be added here
     + Click Amin group then choose user
     + Choose the Name created before
     + Add user
+
++ For IAM Users: When we refresh the browser we get new user that was made previously and Got Readonly Access    
 
