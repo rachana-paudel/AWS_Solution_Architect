@@ -57,3 +57,12 @@ Additional statements can be added here
 
 + For IAM Users: When we refresh the browser we get new user that was made previously and Got Readonly Access    
 
+#### IAM Password Policies
++ strong password= high security
++ can set up a password policy by setting length using num alphanumeric and uppercase and lowercase character.
++ Allow IAM user to change their own password
++ prevent password reuse
+
+#### Multifactor Authentication
++ User can change,delete resource to protect root and IAM users
++ MFA= password we know + security devices like Google authenticator(For virtaul) and Universal 2F authentication where physical device is used.
