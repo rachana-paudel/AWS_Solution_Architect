@@ -122,22 +122,22 @@ Additional statements can be added here
 
 #### IAM Security tools
 + IAM credentials report ( account level)
-  -> A report that list all your account users and the status of their various credentials
+  + A report that list all your account users and the status of their various credentials
 
 + IAM Access Advisor (user level)
-  -> It shows the service permissions granted to user and when those service were last accessed
-  -> You can use this information to revise your policies.    
+  + It shows the service permissions granted to user and when those service were last accessed
+  + You can use this information to revise your policies.    
 
 #### IAM best practices
-+  don't use root user except for AWS account setup
-+  1 physical user=1 aws user
-+  assign user to group and assign permission to group
-+ create strong password pollicy
-+ use and enforce MFA  
-+ create roles for giving permissions to AWS service
-+ use access key for programmatic access
-+ audit permission of your account using IAM credentials report and IAM access advisior
-+ never share IAM users and access key
++  don't use root user except for AWS account setup.
++  1 physical user=1 aws user.
++  assign user to group and assign permission to group.
++ create strong password policy.
++ use and enforce MFA.
++ create roles for giving permissions to AWS service.
++ use access key for programmatic access.
++ audit permission of your account using IAM credentials report and IAM access advisor
++ never share IAM users and access key.
 
 
 ### End of IAM 
