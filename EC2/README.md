@@ -117,3 +117,21 @@
 
 </body>
 </html>
+
+### EC2 instance Roles Demo
++ my first instance->connect
++ ec2 instance connect-> connect
++ linux terminal is opened in browser
++ write : aws --version
++ aws iam list-users
++ aws configure
+ + It ask for AWS access key id, name, region and output format
+ + But it is not good way becaus eit can leak detail if anyone connect to our EC2 instance
+
+#### EC2 purchasing options
+1. On demand instance
++ we have to pay for what we use
++ we can pay per second after first minute for windows or linux and hourly for other OS
++ recommended for short term and uninterrupted workload 
+
+2. 
