@@ -143,3 +143,28 @@
 + we always have access to ec2 capacity when you need it
 + charge at on demand rate whether we run instance or not
 
+#### EC2 spot instances requests
+The process of requesting and using EC2 Spot Instances in AWS involves several steps:
+
+1. Creating a Spot Instance Request:
+   To request Spot Instances, you use the AWS Management Console, AWS CLI, or an SDK to create a Spot Instance request. In this request, you specify parameters such as instance type, maximum price (bid price), availability zone, and the number of instances you need.
+
+2. Spot Instance Pricing:
+    AWS calculates Spot prices based on supply and demand for EC2 capacity. Your bid price should be equal to or greater than the current Spot price to ensure your Spot Instances are fulfilled. If the Spot price exceeds your bid price, your instances may be terminated with a two-minute notification.
+
+3. Fulfillment: 
+   When your bid price exceeds the current Spot price, AWS fulfills your Spot Instance request by launching the requested instances. The instances run until the Spot price exceeds your bid price or capacity becomes unavailable, at which point they may be terminated with a two-minute notification.
+
+4. Handling Interruptions:
+   Since Spot Instances can be interrupted with short notice, it's essential to design your applications to handle interruptions gracefully. You can use strategies like checkpointing, auto-scaling groups, and maintaining state externally to handle interruptions and ensure application availability.
+
+5. Termination Notifications:
+   AWS provides a two-minute notification before terminating Spot Instances due to changes in Spot prices or capacity availability. This notification allows your applications to gracefully handle the instance termination by saving state, completing tasks, or transferring workloads to other instances.
+
+6. Monitoring and Managing Spot Instances: 
+   You can monitor and manage your Spot Instances using AWS services like Amazon CloudWatch, AWS Trusted Advisor, and AWS Cost Explorer. These services provide insights into instance performance, cost optimization, and recommendations for improving efficiency.
+
+7. Spot Fleet: 
+   Alternatively, you can use Spot Fleet to manage a combination of Spot Instances, On-Demand Instances, and Reserved Instances to meet your workload requirements efficiently. Spot Fleet automatically fulfills your capacity requirements while optimizing costs based on your preferences and constraints.
+
+By following these steps and best practices, you can effectively request, manage, and utilize EC2 Spot Instances in AWS to reduce costs and scale your applications dynamically.
