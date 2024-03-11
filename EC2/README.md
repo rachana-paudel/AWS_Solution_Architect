@@ -29,5 +29,9 @@
 + it make balance between compute, memory and networking
 
 2. Compute optimized
-+ All tyoes starting with family 'c' like C5.large
++ All types starting with family 'c' like C5.large
 + it is great for computing intensive task that require high performance processors.
+
+3. Memory optimized
++ Series of R like r5.large
++ fast performance for workload, high performance, perform real time processing og big unstructured data
