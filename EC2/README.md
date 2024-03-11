@@ -211,7 +211,7 @@ There are two types of request
 
 #### Lab
 1. if we copy public ip address and put it in CLI as:
- + 'ssh -i EC@tutorial.pem ec2-user@2.123.222.21' then it shows some results
+ + 'ssh -i EC2tutorial.pem ec2-user@2.123.222.21' then it shows some results
  + if we copy private ip it does not shows any
  + likewise if we stop instance and start again we will get new ip address
  + in this case use elastic ip
@@ -219,3 +219,11 @@ There are two types of request
  + open in new tab and allocate new elastic ip address from amazon pool of Ip address
  + click 'allocate'
  + we get a elastic ip address there
+ + of these ip address is not in use terminate them to reduce cost
+ + clock action and choose associate ip address
+ + Resource type: instance
+ + instance : choose that is running
+ + private up address
+ + click associate
+ + finally our public ip address is not changed
+ + to remove disassociate ip address and then release it
