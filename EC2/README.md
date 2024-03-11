@@ -40,3 +40,11 @@
 + family start with 'D' ,'H' and 'I' like i3.large
 + used for storing intensive task
 + high frequency OLTP system
+
+#### Introduction to Security Group
++ security group is something that is embedded in any instance which act as firewall for that instance
++ all the inbound to the instance and outbound fro the instance are filtered in security group 
++ if the unauthorized port send some information the access is denied
++ authorized IP ranges IPV4 and IPV6
++ if your application is not accessible (time out)then its a issue of security group
++ if your application gives a "connection refused", error when its an applicaion error or its not launched.
