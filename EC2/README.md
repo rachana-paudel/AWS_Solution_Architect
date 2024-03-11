@@ -14,3 +14,11 @@
 + launch instance from AMI
 + we can control traffic to and from instance 
 + uses are application server, web server
+
+#### EC2 User Data
++ It is possible to launch our commands when machine start using ec2 user data script
++ Ec2 user data is used to automate book tasks such as:
+ + installine updates
+ + installing software
+ + downloading common files from the internal
++ EC2 user data script runs with root user 
