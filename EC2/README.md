@@ -138,4 +138,8 @@
 + may share hardware with other instances in the same account
 + no control over instance placement
 
+6. EC2 capacity reservation
++ it is reserved on demand instances capacity in a specific AZ for any duration
++ we always have access to ec2 capacity when you need it
++ charge at on demand rate whether we run instance or not
 
