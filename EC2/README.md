@@ -208,3 +208,14 @@ There are two types of request
   + They often reflect poor architectural decision
   + instead, user a random public ip and register a DNS name to it
   + Or as we'll see later, use a Load Balancer and don't use public ip
+
+#### Lab
+1. if we copy public ip address and put it in CLI as:
+ + 'ssh -i EC@tutorial.pem ec2-user@2.123.222.21' then it shows some results
+ + if we copy private ip it does not shows any
+ + likewise if we stop instance and start again we will get new ip address
+ + in this case use elastic ip
+ + to use that click elastic ip from left side 'network and security'
+ + open in new tab and allocate new elastic ip address from amazon pool of Ip address
+ + click 'allocate'
+ + we get a elastic ip address there
