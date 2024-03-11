@@ -202,4 +202,9 @@ There are two types of request
 + if you need to have a fixed public IP for your instance you need an elastic IP
 + It is a public IPV4 you own as long as you don't delete it
 + you can attach it to one instance at a time
-   
++ with it, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account
++ we can have only 5 elastic ip address   
++ overall try to avoid using elastic ip
+  + They often reflect poor architectural decision
+  + instead, user a random public ip and register a DNS name to it
+  + Or as we'll see later, use a Load Balancer and don't use public ip
