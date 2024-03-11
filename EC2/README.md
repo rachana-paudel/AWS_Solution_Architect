@@ -168,3 +168,11 @@ The process of requesting and using EC2 Spot Instances in AWS involves several s
    Alternatively, you can use Spot Fleet to manage a combination of Spot Instances, On-Demand Instances, and Reserved Instances to meet your workload requirements efficiently. Spot Fleet automatically fulfills your capacity requirements while optimizing costs based on your preferences and constraints.
 
 By following these steps and best practices, you can effectively request, manage, and utilize EC2 Spot Instances in AWS to reduce costs and scale your applications dynamically.
+
+#### How to terminate spot instances
+There are two types of request
+1. One-Time Request: 
+   This type of request is for a single, short-term allocation of Spot Instances. With a one-time request, you specify the instance type, the maximum price (bid price) you're willing to pay per hour, the number of instances you need, and other parameters such as the availability zone. AWS attempts to fulfill this request by launching the requested number of Spot Instances that match your specifications. These instances run until they are interrupted due to either the Spot price exceeding your bid price or capacity constraints in the AWS cloud. Once the instances are terminated, the one-time request is considered fulfilled, and you may need to create a new request if you require additional instances.
+
+2. Persistent Request (Spot Fleet): 
+   This type of request involves using Spot Fleet, which allows you to maintain a specified number of Spot Instances continuously over time. With a persistent request, you configure Spot Fleet with parameters such as the instance types, the maximum price, the target capacity, and optional parameters like diversification across multiple Spot pools and instance weighting. Spot Fleet continually monitors and maintains the target capacity you specify, replenishing any terminated instances automatically to meet your capacity requirements. This type of request is suitable for long-running or continuous workloads where you need to maintain a certain capacity of instances over time.
