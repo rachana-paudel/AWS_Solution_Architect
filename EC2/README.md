@@ -118,4 +118,9 @@
 + we can pay per second after first minute for windows or linux and hourly for other OS
 + recommended for short term and uninterrupted workload 
 
-2. 
+2. Reserved Instances
++ It provides upto 72% discount compared to on demand.
++ Reservation period is 1 to 3years
++ payment options- no upfront(+), partial (++), full upfront(+++)
++ convertible reserved instance can change instance type,family, os etc.
+
