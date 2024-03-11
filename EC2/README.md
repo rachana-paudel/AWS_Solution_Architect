@@ -34,4 +34,9 @@
 
 3. Memory optimized
 + Series of R like r5.large
-+ fast performance for workload, high performance, perform real time processing og big unstructured data
++ fast performance for workload, high performance, perform real time processing og big unstructured data.
+
+4. Storage optimized
++ family start with 'D' ,'H' and 'I' like i3.large
++ used for storing intensive task
++ high frequency OLTP system
