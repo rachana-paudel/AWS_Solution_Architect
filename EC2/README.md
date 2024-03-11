@@ -129,4 +129,8 @@
 + commit to a certain type of usage( $10|hour for 1 or 3 years)
 + flexible across m5.xlarge, m5.2xlarge etc
 
+4. EC2 spot instances
++ can get discount upto 90% compared to on demand
++ Instances that you can lose at any point of time if your max price is less than the current spot price
+
 
