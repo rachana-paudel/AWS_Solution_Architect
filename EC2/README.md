@@ -124,3 +124,9 @@
 + payment options- no upfront(+), partial (++), full upfront(+++)
 + convertible reserved instance can change instance type,family, os etc.
 
+3. Ec2 saving plans
++ discount is similar of Reserved instance
++ commit to a certain type of usage( $10|hour for 1 or 3 years)
++ flexible across m5.xlarge, m5.2xlarge etc
+
+
