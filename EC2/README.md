@@ -194,5 +194,12 @@ There are two types of request
    + It means the machine can only be identified on a private network only
    + The IP must be unique across the private network
    + But 2 different private networks can have the same IPs
-   + machine connect www using an internet gateaway (a proxy)
+   + machine connect www using an internet gateway (a proxy)
    + only a specified range of IPs can be user as private IP   
+
+3. Elastic IPs
++ when you stop and then start an EC2 instance, it can change its public IP
++ if you need to have a fixed public IP for your instance you need an elastic IP
++ It is a public IPV4 you own as long as you don't delete it
++ you can attach it to one instance at a time
+   
