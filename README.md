@@ -13,4 +13,4 @@
 
 ## [Getting Started with IAM](./IAM/README.md)
 
-## [Getting Started with EC2](./EC2/README.md) --> -->
+## [Getting Started with EC2](./EC2/README.md) -->
