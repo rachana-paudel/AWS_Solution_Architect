@@ -27,3 +27,7 @@
 1. General purpose
 + All the types that start with family 't' like t2.micro, t3.micro etc
 + it make balance between compute, memory and networking
+
+2. Compute optimized
++ All tyoes starting with family 'c' like C5.large
++ it is great for computing intensive task that require high performance processors.
