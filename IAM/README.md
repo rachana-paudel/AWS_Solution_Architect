@@ -138,3 +138,6 @@ Additional statements can be added here
 + use access key for programmatic access
 + audit permission of your account using IAM credentials report and IAM access advisior
 + never share IAM users and access key
+
+
+### End of IAM 
