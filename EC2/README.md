@@ -183,3 +183,16 @@ There are two types of request
 + capacity optimized: pool with the optimal capacity for the number of instance
 + price capacity optimized: pods with highest capacity available then select the pod with lowest price
 + spot fleets allows us to automatically request spot instances with lowest price
+
+#### Private vs public IP (IPV4)
+1. Public IP
+   + It means the machine can be identified on the internet
+   + Must be unique across the whole web
+   + can be geo-located easily
+
+2. Private IP
+   + It means the machine can only be identified on a private network only
+   + The IP must be unique across the private network
+   + But 2 different private networks can have the same IPs
+   + machine connect www using an internet gateaway (a proxy)
+   + only a specified range of IPs can be user as private IP   
