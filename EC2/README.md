@@ -176,3 +176,10 @@ There are two types of request
 
 2. Persistent Request (Spot Fleet): 
    This type of request involves using Spot Fleet, which allows you to maintain a specified number of Spot Instances continuously over time. With a persistent request, you configure Spot Fleet with parameters such as the instance types, the maximum price, the target capacity, and optional parameters like diversification across multiple Spot pools and instance weighting. Spot Fleet continually monitors and maintains the target capacity you specify, replenishing any terminated instances automatically to meet your capacity requirements. This type of request is suitable for long-running or continuous workloads where you need to maintain a certain capacity of instances over time.
+
+#### Strategies to allocate spot instances   
++ lowest price : from the pool with lowest price
++ diversified: distributed across all pools
++ capacity optimized: pool with the optimal capacity for the number of instance
++ price capacity optimized: pods with highest capacity available then select the pod with lowest price
++ spot fleets allows us to automatically request spot instances with lowest price
