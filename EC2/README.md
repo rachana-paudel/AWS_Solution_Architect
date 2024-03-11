@@ -22,3 +22,8 @@
  + installing software
  + downloading common files from the internal
 + EC2 user data script runs with root user 
+
+#### Ec2 instance types
+1. General purpose
++ All the types that start with family 't' like t2.micro, t3.micro etc
++ it make balance between compute, memory and networking
