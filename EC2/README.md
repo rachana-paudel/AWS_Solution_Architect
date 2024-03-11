@@ -133,4 +133,9 @@
 + can get discount upto 90% compared to on demand
 + Instances that you can lose at any point of time if your max price is less than the current spot price
 
+5. Ec2 Dedicated Host
++ instance run on hardware that's dedicated to us
++ may share hardware with other instances in the same account
++ no control over instance placement
+
 
