@@ -55,4 +55,65 @@
 + 22 = SFTP( secure ftp) upload file using ssh
 + 80 = HTTP- access unsecured websites
 + 443= HTTPS access secured websites
-3389 = RDP (Remote Desktop Protocol) log into a window instance
++ 3389 = RDP (Remote Desktop Protocol) log into a window instance
+
+### SSH Summary Table
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th></th>
+    <th>SSH</th>
+    <th>Putty</th>
+    <th>EC2 instance connect</th>
+  </tr>
+
+  
+  <tr>
+    <th>Mac</th>
+    <td>&#10004;</td>
+    <td></td>
+    <td>&#10004;</td>
+    
+  </tr>
+  <tr>
+    <th>Linux</th>
+    <td>&#10004;</td>
+    <td></td>
+    <td>&#10004;</td>
+  </tr>
+  <tr>
+    <th>Window<10</th>
+    <td></td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+  </tr>
+  <tr>
+    <th>Window>=10</th>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+  </tr>
+</table>
+
+</body>
+</html>
