@@ -48,3 +48,11 @@
 + authorized IP ranges IPV4 and IPV6
 + if your application is not accessible (time out)then its a issue of security group
 + if your application gives a "connection refused", error when its an applicaion error or its not launched.
+
+#### Classic port to know
++ 22 = SSH(secure shell) to log into a linux instance
++ 21= FTP (file transfer protocol) upload files into a fule sahre
++ 22 = SFTP( secure ftp) upload file using ssh
++ 80 = HTTP- access unsecured websites
++ 443= HTTPS access secured websites
+3389 = RDP (Remote Desktop Protocol) log into a window instance
