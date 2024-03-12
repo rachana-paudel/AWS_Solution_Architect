@@ -234,3 +234,9 @@ There are two types of request
   1. Cluster
      + since many ec2 instances are in same rack( hardware) it decreases latency and perform high speed 10Gbps bandwith between instances
      + if the rack fails all instances fail at the same time
+
+   2. Spread
+    + In this method different availability zones are used in each availability zone we can keep only 7 partition.
+    + for example lets take 3 A.Z each with 2 hardware and in each hardware there is 1 ec2 instance  
+    + it reduce risk because if on1 hardware fail another can be used
+    
