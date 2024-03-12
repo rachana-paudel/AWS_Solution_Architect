@@ -227,3 +227,10 @@ There are two types of request
  + click associate
  + finally our public ip address is not changed
  + to remove disassociate ip address and then release it
+
+ #### Placement group
+ + When we want to have a control of how ec2 instance going to be placed so we use placement group
+ + we can do it in 3 ways are:
+  1. Cluster
+     + since many ec2 instances are in same rack( hardware) it decreases latency and perform high speed 10Gbps bandwith between instances
+     + if the rack fails all instances fail at the same time
