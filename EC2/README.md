@@ -240,3 +240,10 @@ There are two types of request
     + for example lets take 3 A.Z each with 2 hardware and in each hardware there is 1 ec2 instance  
     + it reduce risk because if on1 hardware fail another can be used
     
+   3. Partition 
+    + we can have 7 partition in 1 A.Z and can have many ec2 instance in each partition
+    + example we take 2 A.Z and in first A.Z we take 2 partition and each partition consists of 4 ec2 instance and in second A.Z 1 partition with 4 ec2
+    + we can get 100s of instances within a setup
+    + each partition is isolated from failure
+    + ec2 instances get access to the partition information as metadata
+    + Use cases: HDFS,HBase
