@@ -163,5 +163,15 @@ Additional statements can be added here
       + Finance account1
       + Finance account2
 
+2. Environmental Lifecycle
+  + Production OU
+  + Dev OU
+  + Test OU
+
+3. Project Based
+  + Project1 OU
+  + Project2 OU
+  + Project3 OU        
+
 
 ### End of IAM 
