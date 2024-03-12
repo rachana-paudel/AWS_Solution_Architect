@@ -207,8 +207,17 @@ Blocklist and Allowlist strategies
 + Aws accounts it shows all the OU
 + we can move management account of test to prod or any other by  check in taht account-> action-.move->prod
 
-
-
-
+##### To restrict service control policies
++ click on aws organization and click on policies
++ I shows 4 policies which are disable
++ click service control policies-> enable service control policies
++ click service control policies
++ create new policy
++ policy name: DenyAccessS3
++ In JSON command "Effect": "Deny"
++ In the right side of JSON code there are some statement and search for S3 and click "s3:*"  and resource=[*]
++ create policy
++ Now check policies by clicking the 'aws accounts'-> root-> policies (i shows policies attached directly)
++ Likewise in children OU -> policies( there is one extra that is inherited from root)
 
 ### End of IAM 
