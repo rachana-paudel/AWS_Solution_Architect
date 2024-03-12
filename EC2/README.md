@@ -305,3 +305,21 @@ There are two types of request
 + And then when the instance is started, then the RAM is going to be loaded onto the EC2 instance memory And that means that it is just as is your ec2 instance never got stopped
 
 <img src='images/hibernation-flow.png' height='100%' width='100%' alt='Hibernation Flow Diagram'>
+
+#### Lab
+
++ launch instance
++ create an instances by following the step
++ In advance detail-> 'stop hibernate behavior: enable'
++ In the 'configure storage: click on advance in right side'
++ choose EBS volume
++ encrypted:yes
++ kms key: default
++ launch instances
++ click on 'connect on the top in the side of action
++ click ec2 instance connect-> connect
++ go back to instance-> click instances
++ it will open new browser and here is one command called 'uptime' because it shows for how long instance is opened
++ on the right side there is 'Instance state-> click on hibernate instance' -> hibernate
++ we can start the instance if it is stopped
++ at the end terminate instance
