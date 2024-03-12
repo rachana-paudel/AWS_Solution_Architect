@@ -262,3 +262,15 @@ There are two types of request
 + create group
 + Click Instance and launch instance
 + Advance detail-> Placement group name: choose any one group that we made before like 'first-group'
+
+#### Elastic Network Interfaces(ENI)
++ ENI is a logical component in a VPC that represent a virtual card
++ They are what gives ec2 instances access to the network abd acn be used outside the ec2 instances as well
++ example we have 1 A.Z and 1 ec2 instance and to it is attached on eth0, your primary ENI which provide your EC2 instance network connectivity and Private IP
++ we cana lso have secondary ENI with eth1
++ It can have primary private ipv4, one or more secondary ipv4
++ 1 elastic ipv4 per private ipv4
++ 1 or more security group
++ A MAC address
++ we can create EMI independently and attach them on ec2 instances
++ We can also make second ec2 instance and move eth1- secondary ENI of previous ec2 instance to this ec2 instance
