@@ -80,7 +80,7 @@ Additional statements can be added here
     + You can develop scropts to manage your resources
     + Alternative to AWS Management Console.
 
-3.  AWS Softwate Development kit (SDK)
+3.  AWS Software Development kit (SDK)
     + language specific API
     + enables to access and manage AWS service programming
     + embedded within your application
@@ -138,6 +138,30 @@ Additional statements can be added here
 + use access key for programmatic access.
 + audit permission of your account using IAM credentials report and IAM access advisor
 + never share IAM users and access key.
+
+#### AWS Organization
++ It is a global service allows to manage multiple AWS accounts
++ The main account is the management account and other accounts are member accounts
++ member account can only be the part of 1 organization
++ It allows consolidated billing across all accounts so we can perform single payment for different facilities.
++ There is benefit from aggregated usage like ec2,s3 because there is more discount in this process.
++ If reserved instance is unused of one account is not using any services then it means that services can be used by another account within an organization
++ API is used to to automate AWS account creation
+
+<img src="images/aws organization.png" height=100% width=100%>
+
+#### Organizational Units (OU)
+1.  Business Unit
+  + Management account
+    + Sales OU
+      + Sales account1
+      + Sales account2
+    + Retail OU
+      + Retail account1
+      + Retail account2
+    + Finance OU
+      + Finance account1
+      + Finance account2
 
 
 ### End of IAM 
