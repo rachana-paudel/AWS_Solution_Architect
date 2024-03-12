@@ -274,3 +274,22 @@ There are two types of request
 + A MAC address
 + we can create EMI independently and attach them on ec2 instances
 + We can also make second ec2 instance and move eth1- secondary ENI of previous ec2 instance to this ec2 instance
+
+### Lab
++ Lets create 2 instances
++ When scroll down to network interface we can se 'Interface ID, pubic , private IPV4, ....etc
++ we can also create a new network interface
++ In the left hand side there is 'Nework interface' click on that and create new network interface
++ Description: DemoENI
++ Subnet: ....
++ Private IPV4 address: auto assign
++ Security group: sg-....
++ click 'create network interface'
++ Click on 'DemoENI'
++ Click 'action' -> attach
++ Instance: choose any and 'attach'
++ Refresh
++ click Networking
++ srolling down there is 'network interfaces(2) one of them is primary which gives us a public and private IPV4 and demoENi gives us a secondary private ipv4
++ This DemoENi we have control over so we could take it and move from one instance to another imaging that the two ec2 instances are running the same application and we want to access them using the private ipv4. Then we can move the ENI over the reason is to do a very quick and easy network failover between the instance by moving the ENI
++ For this we can detach and reattach again
