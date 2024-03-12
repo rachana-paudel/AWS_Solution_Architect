@@ -247,3 +247,18 @@ There are two types of request
       + each partition is isolated from failure
       + ec2 instances get access to the partition information as metadata
       + Use cases: HDFS,HBase
+
+#### Lab  
++ Find 'Placement group' in the network and security
++ click on 'create placement group'
++ Name: first-group
++ placement strategy: cluster
++ click create group
++ Again create placement group but this time strategy shoul be different like spread
++ spread level: Rack(no restriction)
++ click create group
++ next time strategy: partition
++ no of partition: 3
++ create group
++ Click Instance and launch instance
++ Advance detail-> Placement group name: choose any one group that we made before like 'first-group'
