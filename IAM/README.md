@@ -189,4 +189,26 @@ Additional statements can be added here
 Blocklist and Allowlist strategies
 <img src='images/allow and block list.png' height='100%' width='100%' >
 
+#### Lab
++ search aws organization which is global service and click create an organization
++ add a new account
++ we can create or invite existing account using email and sending invitation
++ we can view invitation
++ go to aws organization again and click invitation it shows 'accept' click there
++ after accepting invitation click on dashboard
++ back to aws organization and aws account there is root click there
++ click action 'create new'
++ organizational unit name ='Dev' create OU
++  action:create new 
++ organizational unit name 'test'
++ organizational unit name 'prod'
++ again inside prod click prod and -> action -> create new-> OU name:HR
++ again action-> finance
++ Aws accounts it shows all the OU
++ we can move management account of test to prod or any other by  check in taht account-> action-.move->prod
+
+
+
+
+
 ### End of IAM 
