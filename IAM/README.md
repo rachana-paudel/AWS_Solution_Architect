@@ -148,7 +148,7 @@ Additional statements can be added here
 + If reserved instance is unused of one account is not using any services then it means that services can be used by another account within an organization
 + API is used to to automate AWS account creation
 
-<img src="images/aws organization.png" height=100% width=100%>
+<img src="images/aws organization.png" height='100%' width='100%'>
 
 #### Organizational Units (OU)
 1.  Business Unit
@@ -178,7 +178,7 @@ Additional statements can be added here
 + They do not apply to the management account
 + must have an explicit allow
 
-<img src="images/scp heirarchy.png" height=100% width=100%>
+<img src='images/scp heirarchy.png' height='100%' width='100%' >
 
 1. Management account can do anything
 2. Account A can do anything except Redshift
