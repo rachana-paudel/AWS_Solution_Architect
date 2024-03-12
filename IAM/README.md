@@ -185,7 +185,8 @@ Additional statements can be added here
 3. Account B can do anything except access redshift, except lambda
 4. Account C can do anything except access redshift
 
-
-
+#### SCP Examples
+Blocklist and Allowlist strategies
+<img src='images/allow and block list.png' height='100%' width='100%' >
 
 ### End of IAM 
