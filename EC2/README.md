@@ -304,4 +304,4 @@ There are two types of request
 + The the instance is hut down and the RAM disappears because as soon as you stop an instance the RAM goes away, but the EBS volume still contains the dump of the RAM
 + And then when the instance is started, then the RAM is going to be loaded onto the EC2 instance memory And that means that it is just as is your ec2 instance never got stopped
 
-<img src='images/hibernation-flow.png' height='100%' width='100%' alt='Hibernation Flow Diagram'>
+<img src='./images/hibernation-flow.png' height='100%' width='100%' alt='Hibernation Flow Diagram'>
