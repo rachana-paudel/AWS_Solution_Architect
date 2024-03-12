@@ -232,7 +232,7 @@ There are two types of request
  + When we want to have a control of how ec2 instance going to be placed so we use placement group
  + we can do it in 3 ways are:
   1. Cluster
-     + since many ec2 instances are in same rack( hardware) it decreases latency and perform high speed 10Gbps bandwith between instances
+     + since many ec2 instances are in same rack( hardware) it decreases latency and perform high speed 10Gbps bandwith between instances, high networking performance
      + if the rack fails all instances fail at the same time
 
    2. Spread
