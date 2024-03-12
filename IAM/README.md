@@ -171,7 +171,21 @@ Additional statements can be added here
 3. Project Based
   + Project1 OU
   + Project2 OU
-  + Project3 OU        
+  + Project3 OU 
+
+#### Security: Service Control Policies(SCP)
++ IAM policies applied to OU or accounts to restrict users and roles
++ They do not apply to the management account
++ must have an explicit allow
+
+<img src="images/scp heirarchy.png" height=100% width=100%>
+
+1. Management account can do anything
+2. Account A can do anything except Redshift
+3. Account B can do anything except access redshift, except lambda
+4. Account C can do anything except access redshift
+
+
 
 
 ### End of IAM 
