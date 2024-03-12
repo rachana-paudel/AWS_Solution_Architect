@@ -274,6 +274,7 @@ There are two types of request
 + A MAC address
 + we can create EMI independently and attach them on ec2 instances
 + We can also make second ec2 instance and move eth1- secondary ENI of previous ec2 instance to this ec2 instance
++ as we can create an instance and attach storage to it likewise we can attach ENI
 
 ### Lab
 + Lets create 2 instances
@@ -290,6 +291,17 @@ There are two types of request
 + Instance: choose any and 'attach'
 + Refresh
 + click Networking
-+ srolling down there is 'network interfaces(2) one of them is primary which gives us a public and private IPV4 and demoENi gives us a secondary private ipv4
++ scrolling down there is 'network interfaces(2) one of them is primary which gives us a public and private IPV4 and demoENi gives us a secondary private ipv4
 + This DemoENi we have control over so we could take it and move from one instance to another imaging that the two ec2 instances are running the same application and we want to access them using the private ipv4. Then we can move the ENI over the reason is to do a very quick and easy network failover between the instance by moving the ENI
 + For this we can detach and reattach again
+
+### EC2 Hibernate
++ As we know the concept of start,stop and terminate like hibernate is another
++ it is much faster because it is just freezed the OS is not stopped or restarted.
++ USe cases: long running processing, saving the RAM, services that take time to initialize
++ Lets take ec2 instance that is running and the data is in RAM then we start the hibernation process  
++ Then the instance will go in the stopping state and the RAM is goint to be dumped into your EBS volume
++ The the instance is hut down and the RAM disappears because as soon as you stop an instance the RAM goes away, but the EBS volume still contains the dump of the RAM
++ And then when the instance is started, then the RAM is going to be loaded onto the EC2 instance memory And that means that it is just as is your ec2 instance never got stopped
+
+<img src='./images/hibernation-flow.png' height='300' width='500'>
