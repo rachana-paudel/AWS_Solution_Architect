@@ -398,5 +398,19 @@ The intersection of organization scp, permission boundary, identity based policy
 + Identity providers
   + built-in identity store in IAM identity center
   3rd party: Active directory, one login..
-  
+
+
+<img src='images/iam identity center.png' height='100%' width='100%' >
+
+
+
+
+
+
+
+
+
+
+
+
 ### End of IAM 
