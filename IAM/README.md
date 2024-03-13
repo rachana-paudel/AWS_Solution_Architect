@@ -416,6 +416,8 @@ The intersection of organization scp, permission boundary, identity based policy
 + Example cost centre, title, locale, ..
 + USe case: define permission once then modify aws access by changing the attributes
 
+#### Microsoft Active Directory (AD)
++ 
 
 
 
