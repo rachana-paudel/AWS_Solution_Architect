@@ -278,7 +278,7 @@ Blocklist and Allowlist strategies
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Effect": "Deny",
+      "Effect": "Allow",
       "Action": "["ec2:startInstances","ec2:StopInstances"]
       "Resource": "arn:aws:ec2:us-east-1:1233456789012:instance/*",
       "Condition":{
@@ -298,6 +298,28 @@ Blocklist and Allowlist strategies
 + to for MFA
 + but the user can do anything on EC2, but they can only stop and terminate instances if they have MFA so this is deny on false
 
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ec2:*,
+      "Resource": "*"
+    },
+
+    {
+      "Effect": "Deny",
+      "Action": "ec2:StopInstances","ec2:TerminateInstances"],
+      "Resource": "*",
+      "Condition":{
+        "BoolIfExists"{
+            "aws:MultiFactorAuthPresent":false
+        }
+      }
+    }
+  ]
+}
 
 
 
