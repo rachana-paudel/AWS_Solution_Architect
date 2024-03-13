@@ -460,6 +460,26 @@ Using AD you can create ec2 instances that are going to be run in windows and th
 + Edition: Enterprise edition-> next
 + Likewise we can choose any directory types  we want
 
+#### AWS Control Tower
++ easy way to set up and govern a secure and compliant multi-account aws environment based on best practices
++ aws control tower uses aws organizations to create accounts
++ automate the setup of your environment in a few clicks
++ automate ongoing policy management using guardrails
++ detect policy violations remediate them
++ monitor compliance through an interactive dashboard
+
+#### AWS Control Tower - Guardrails
++ provides ongoing governance for your control tower environment
++ There are 2 kinds of guardrails
+  + Preventive guardrails - to prevent from accounts for doing something and therefore they are restricted. And so we are going to use SCP, so service control policies,from aws organizations policies to apply them to all our accounts(restrict regions across all your accounts)
+  + Detective guardrails- using aws config(eg. identity untagged resources). just to detect non-compliance. 
+
+<img src='images/control tower.png' height='100%' width='100%' >  
+
+
+
+
+
 
 
 ### End of IAM 
