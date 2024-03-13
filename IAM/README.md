@@ -388,7 +388,7 @@ The intersection of organization scp, permission boundary, identity based policy
 <img src='images/iam policy evaluation logic.png' height='100%' width='100%' >
 
 
-### IAM Identity Center( successor to aws single sign-on)
+#### IAM Identity Center( successor to aws single sign-on)
 + one login for all your
   + aws accounts in aws organizations
   + business cloud applications(eg. salesforce , box, microsoft 365,..)
@@ -402,6 +402,19 @@ The intersection of organization scp, permission boundary, identity based policy
 
 <img src='images/iam identity center.png' height='100%' width='100%' >
 
+#### AWS IAM Identity Center Fine-grained permissions and assignments
+1. Multi- account permission
++ manage access across aws accounts in your aws organization
++ permission sets- a collection of one or more IAM policies assigned to users and groups to define aws access
+
+2. application assignments
++ provide required url , certificate and metadata
++ SSO access to many SAML 2. business applications (Sa;esforce Box, Microsoft 365,..)
+
+3. Attribute based access control (ABAC)
++ fine grained permissions based on users attributes stored in IAM Identity Center Identity Store
++ Example cost centre, title, locale, ..
++ USe case: define permission once then modify aws access by changing the attributes
 
 
 
