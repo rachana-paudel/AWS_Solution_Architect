@@ -351,8 +351,32 @@ Blocklist and Allowlist strategies
 <img src='images/resource policies.png' height='100%' width='100%' >
       
 
-#### IAM Roles vs Resource Bssed Policies        
-      
+#### IAM Roles vs Resource Based Policies
+Cross account are those account which allow a principal in one account to access resources in a second account. It can be done in 2 ways
 
+1. IAM roles:
++ In this we assign roles to the account to access the storage (amazon s3)
++ We can set the services that can be accessible by Account A assigning the role to Account B to access Amazon S3. 
++ When you assume a role(user,application or service), you give yp your original permission and take the permissions assigned to the role
++ When using
+
+
+2. Resource based policies
++ User in Account A apply S3 bucket policy to access Amazon S3
++ When using a resource-based policy, the principal does not have to give up his permission
+
+###### Difference
++ The big difference where it comes to play is when you use Amazon EventBridge.
++ Resource-based policy: Lambda, SNS,SQS,CloudWatch Logs, API Gateway..
++ eg. Allow EventBridge
++ IAM role : kinesis stream, Systems Manager Run Command, ECS task..
+
+### IAM Permission Boundaries
++ It is supported for users and roles(not group)
++ advanced feature to use a managed policy to set the maximum permission an IAM entity can get
++ Go to IAM -> User-> User name:john->next permission->next tags->review->create user
++ Click john->add permissions->attach existing policies(any we want)->review->add permission
++ click job->set boundary->select any we want->set boundary
++ 
 
 ### End of IAM 
