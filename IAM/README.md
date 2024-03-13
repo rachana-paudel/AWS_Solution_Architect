@@ -306,14 +306,14 @@ Blocklist and Allowlist strategies
       "Effect": "Allow",
       "Action": "ec2:*,
       "Resource": "*"
+    ]
     },
-
     {
       "Effect": "Deny",
       "Action": "ec2:StopInstances","ec2:TerminateInstances"],
       "Resource": "*",
       "Condition":{
-        "BoolIfExists"{
+        "BoolIfExists":{
             "aws:MultiFactorAuthPresent":false
         }
       }
@@ -321,7 +321,30 @@ Blocklist and Allowlist strategies
   ]
 }
 
+#### IAM for S3
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "["s3:ListBucket"]
+      "Resource": "arn:aws:s3:::test"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "[
+        "s3:PutObject,
+        "s3:GetObject",
+        "s3:DeleteObject"
+        ],
+      "Resource": "arn:aws:s3:::test"
+    }
+  ]
+}
 
+      
+        
+      
 
 
 ### End of IAM 
