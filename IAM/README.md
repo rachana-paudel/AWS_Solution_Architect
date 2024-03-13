@@ -409,7 +409,7 @@ The intersection of organization scp, permission boundary, identity based policy
 
 2. application assignments
 + provide required url , certificate and metadata
-+ SSO access to many SAML 2. business applications (Sa;esforce Box, Microsoft 365,..)
++ SSO access to many SAML 2. business applications (Salesforce Box, Microsoft 365,..)
 
 3. Attribute based access control (ABAC)
 + fine grained permissions based on users attributes stored in IAM Identity Center Identity Store
@@ -444,10 +444,21 @@ The intersection of organization scp, permission boundary, identity based policy
 + cannot be joined with on-premise AD
 + AD compatible managed directory on AWS
 
+Using AD you can create ec2 instances that are going to be run in windows and these windows instances can join the domain controllers for your network and shares all the logins, credential and so on.
 
+#### Connection of IAM Identity Center with AD Setup
++ if you connect to AD that is managed on your aws using the directory service then the integration is out of the box. You just tell IAM identity center to integrate and connect to your aws managed microsoft AD
++ if we have self managed directory for example on-premises, in that case, you have 2 ways of connecting to your self managed directory
+  + the first one is to create 2 way trust relationship using aws managed microsoft AD and the you setup 2 way trust relationship between you AD then you use out of the box integration coming from IAM identity center for single sign-up
+  + the other option would be to use an AD Connector. so an AD connector would have the role to integrate with IAM identity center. And then you would connect to it and then it would automatically proxy any kind of request on to your self managed directory.
 
+<img src='images/selfmanage directory.png' height='100%' width='100%' >
 
-
+#### Lab
++ search service called 'directory service'
++ setup directory -> directory types: aws managed microsoft AD (or any we want)-> next
++ Edition: Enterprise edition-> next
++ Likewise we can choose any directory types  we want
 
 
 
