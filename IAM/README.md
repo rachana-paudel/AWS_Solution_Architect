@@ -350,7 +350,8 @@ Blocklist and Allowlist strategies
 
 <img src='images/resource policies.png' height='100%' width='100%' >
       
-        
+
+#### IAM Roles vs Resource Bssed Policies        
       
 
 
