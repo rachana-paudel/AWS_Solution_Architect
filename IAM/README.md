@@ -65,7 +65,7 @@ Additional statements can be added here
 
 #### Multifactor Authentication
 + User can change,delete resource to protect root and IAM users
-+ MFA= password we know + security devices like Google authenticator(For virtaul) and Universal 2F authentication where physical device is used.
++ MFA= password we know + security devices like Google authenticator(For virtual) and Universal 2F authentication where physical device is used.
 
 #### How can user access AWS?
 1.  Management Console
@@ -219,5 +219,56 @@ Blocklist and Allowlist strategies
 + create policy
 + Now check policies by clicking the 'aws accounts'-> root-> policies (i shows policies attached directly)
 + Likewise in children OU -> policies( there is one extra that is inherited from root)
+
+##### We can attached new policy
++ click on any child (finance) and policy
++ attach policy click on 'DenyAccessS3' or other we made it shows 'DenyAccessS3 has been inherited from finance
++ if we search S3 services and bucket there is no permission because we have denied permission
+
+#### IAM Conditions
+1. aws:SourceIp
+  + used to restrict the client Ip from which the API calls are being made
+  + It has deny * on everything if its not an IP address and then we have a list od two CIDRs of two Ip address ranges. So that means that unless the client makes an API call from within these IP addresses then the API call is being denied
++ this can be used to restrict usage on AWS only to, for example your company network and therefore guaranteeing that only your company can access your own AWS environment so that's one of these conditions 
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": "*",
+      "Resource": "*",
+      "Condition":{
+        "NotIpAddress":{
+          "aws:SourceIp":[192.0.2.0/24,"23.0.113.0/24]
+        }
+      }
+    }
+  ]
+}
+
+2. aws:RequestedRegion
++ restrict the region the API calls are made to
++ it is something global because it started at the AWS and its restricting the region the API calls are made to. So in this one we deny anything on EC2. RDS, and DynanoDB
++ if we are in the region eu-central-1 or eu-west-1, so here we deny access to these services in this specific region on their organization SCP to deny or to allow only access to a specific region
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": "["ec2:*,"rds:*","dynamodb:*"]",
+      "Resource": "*",
+      "Condition":{
+        "StringEquals":{
+          "aws:SourceIp":["eu-cenral-1","eu-west-1"]
+        }
+      }
+    }
+  ]
+}
+
+
+
 
 ### End of IAM 
