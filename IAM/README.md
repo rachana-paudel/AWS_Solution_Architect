@@ -377,6 +377,7 @@ Cross account are those account which allow a principal in one account to access
 + Go to IAM -> User-> User name:john->next permission->next tags->review->create user
 + Click john->add permissions->attach existing policies(any we want)->review->add permission
 + click job->set boundary->select any we want->set boundary
-+ 
++ It can be used as a combinations of AWS Organizations SCP
+The intersection of organization scp, permission boundary, identity based policy is called 'effective permissions'
 
 ### End of IAM 
