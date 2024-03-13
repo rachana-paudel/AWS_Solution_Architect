@@ -348,7 +348,7 @@ Blocklist and Allowlist strategies
   ]
 }
 
-<img src='images/allow and block list.png' height='100%' width='100%' >
+<img src='images/resource policies.png' height='100%' width='100%' >
       
         
       
