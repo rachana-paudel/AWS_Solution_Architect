@@ -379,5 +379,13 @@ Cross account are those account which allow a principal in one account to access
 + click job->set boundary->select any we want->set boundary
 + It can be used as a combinations of AWS Organizations SCP
 The intersection of organization scp, permission boundary, identity based policy is called 'effective permissions'
++ Use cases:
+  + Delegate responsibilities to non adminisrators within their permission boundaries for example create newIAM users
+  + allow developers to self-assign policies and a
+  manage their own permissions while making sure they cant escalate their privileges
+  + useful to restrict one specific user
+
+<img src='images/iam policy evaluation logic.png' height='100%' width='100%' >
+
 
 ### End of IAM 
