@@ -228,7 +228,7 @@ Blocklist and Allowlist strategies
 #### IAM Conditions
 1. aws:SourceIp
   + used to restrict the client Ip from which the API calls are being made
-  + It has deny * on everything if its not an IP address and then we have a list od two CIDRs of two Ip address ranges. So that means that unless the client makes an API call from within these IP addresses then the API call is being denied
+  + It has deny * on everything if its not an IP address and then we have a list of two CIDRs of two Ip address ranges. So that means that unless the client makes an API call from within these IP addresses then the API call is being denied
 + this can be used to restrict usage on AWS only to, for example your company network and therefore guaranteeing that only your company can access your own AWS environment so that's one of these conditions 
 
 {
@@ -261,12 +261,43 @@ Blocklist and Allowlist strategies
       "Resource": "*",
       "Condition":{
         "StringEquals":{
-          "aws:SourceIp":["eu-cenral-1","eu-west-1"]
+          "aws:SourceIp":["eu-central-1","eu-west-1"]
         }
       }
     }
   ]
 }
+
+3. ec2:ResourceTag
++ there is prefix ec2 therefore this applies to the tags on your ec2 instance. And so here we allow to start and to stop instances, for any instance if the Resource Tag/Project is equals to DataAnalytics
++ That means that if the ec2 instance has the correct tags, being project and DataAnalytics, then we're good
++ but then as you can see there is the aws:PrincipleTag, and this applies to your user tag. So its not an ec2 instance tag, this is a user tag.
++ so your user must also be the part of department data to perform these actions
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": "["ec2:startInstances","ec2:StopInstances"]
+      "Resource": "arn:aws:ec2:us-east-1:1233456789012:instance/*",
+      "Condition":{
+        "StringEquals":{
+          "ec2:ResourceTag/Project": "DataAnalytics",
+          "aws:PrincipalTag/Department":["Data"]
+        }
+      }
+    }
+  ]
+}
+
+
+
+
+4. aws:MultiFactorAuthPresent
++ to for MFA
++ but the user can do anything on EC2, but they can only stop and terminate instances if they have MFA so this is deny on false
+
 
 
 
