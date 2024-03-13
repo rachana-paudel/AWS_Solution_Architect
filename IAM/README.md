@@ -388,4 +388,15 @@ The intersection of organization scp, permission boundary, identity based policy
 <img src='images/iam policy evaluation logic.png' height='100%' width='100%' >
 
 
+### IAM Identity Center( successor to aws single sign-on)
++ one login for all your
+  + aws accounts in aws organizations
+  + business cloud applications(eg. salesforce , box, microsoft 365,..)
+  + ec2 window instances
+  + one login access to everything
+
++ Identity providers
+  + built-in identity store in IAM identity center
+  3rd party: Active directory, one login..
+  
 ### End of IAM 
