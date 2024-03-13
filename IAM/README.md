@@ -435,6 +435,14 @@ The intersection of organization scp, permission boundary, identity based policy
 +  on-premise trust aws and aws trust on-premises
 +  if on-premise directory user goes an authentic to your on-premise AD using AWS accounts, and vice versa, it can be trusted to go and look it up
 
+2. AD Connector
++ directory gateway(proxy) to redirect to on-premise AD, supports MFA and it support MFA if you need MFA
++ users are solely managed into the on-premise AD
++ AD connector act as proxy,perform query for on-premise AD
+
+3. Simple AD
++ cannot be joined with on-premise AD
++ AD compatible managed directory on AWS
 
 
 
