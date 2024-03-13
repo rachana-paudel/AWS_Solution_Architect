@@ -205,7 +205,7 @@ Blocklist and Allowlist strategies
 + again inside prod click prod and -> action -> create new-> OU name:HR
 + again action-> finance
 + Aws accounts it shows all the OU
-+ we can move management account of test to prod or any other by  check in taht account-> action-.move->prod
++ we can move management account of test to prod or any other by  check in that account-> action-.move->prod
 
 ##### To restrict service control policies
 + click on aws organization and click on policies
@@ -417,8 +417,23 @@ The intersection of organization scp, permission boundary, identity based policy
 + USe case: define permission once then modify aws access by changing the attributes
 
 #### Microsoft Active Directory (AD)
-+ 
++ It is software found in any windows server with AD Domain services
++ It is Database of object: user, accounts, computers, printers, file shares, security group
++ centralized security management, create account, assign permissions
++ objects are organized in trees
++ a group of trees is a forest
++ Example:
+  + we have a domain controller and create an account with username john and password= password
+  + the idea that all the other windows machines we have within our network are going to be connected to domain controller, so that if we are using the john password on the first machine is going to look it up in the controller and say yes we have that login and then allow you to login in that machine
+  + so all these machines are going to be connected to your domain controller and that allows you to have the users accessible on any single machine
 
+#### AD services
+1. AWS Managed Microsoft AD
++  to create your own AD in aws, manage users locally, supports MFA
++  you can also create trust connections with your on-premise AD
++  user shares trust between on-premises and aws managed AD
++  on-premise trust aws and aws trust on-premises
++  if on-premise directory user goes an authentic to your on-premise AD using AWS accounts, and vice versa, it can be trusted to go and look it up
 
 
 
