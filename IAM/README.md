@@ -324,7 +324,7 @@ Blocklist and Allowlist strategies
 #### IAM for S3
 + we have two bucket list
 + first one is list bucket and this applies to this arn right here, so s3:::test because its a bucket level permission and therefore we have to specify the bucket itself
-+This permission allows the user to see the list of objects within the bucket.
++ This permission allows the user to see the list of objects within the bucket.
 
 + but if we have a look at second(object level permission) GetObject, PutObject, and delete object this applies to objects within a bucket and therefore your arn is going to be different and you are going to have /* to represent all the objects within your buckets
 + this is why we have different arn because this is object level permission.
