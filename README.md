@@ -6,5 +6,4 @@
 
 ## <a href="./EC2/README.md">Getting Started with EC2</a>
 
-## <a href="./EC2 Instance Storage/README.md">Getting Started with EC2 Instance Storage</a>
 
