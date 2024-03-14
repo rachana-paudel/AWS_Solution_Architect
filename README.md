@@ -6,7 +6,7 @@
 
 ## <a href="./EC2/README.md">Getting Started with EC2</a>
 
-## <a href="./EBS Instance Storage/README.md">Getting Started with EC2</a>
+## <a href="./EBS Instance Storage/README.md">Getting Started with EEBS Instance Storage</a>
 
 
 
