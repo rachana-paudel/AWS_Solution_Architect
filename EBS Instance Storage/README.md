@@ -18,4 +18,12 @@
 
 + Inability to Attach Across AZs: EBS volumes cannot be attached across different availability zones within a region. for eg: EBS volume in us-east-1a cannot be attached to us-east-1b
 
-+ Snapshot Requirement for Migration: To move an EBS volume across availability zones, it needs to be first snapshot, as it's not directly copied. Then we area able to move a volume across from different AZ
++ Snapshot Requirement for Migration: To move an EBS volume across availability zones, it needs to be first snapshot, as it's not directly copied. Then we are able to move a volume across from different AZ
+
++ You have to provision capacity in advance so you need to say how many GBs you want in advance and the IOPS, which is I/O operation per seconds, and you are basically defining how you want your ebs volume to perform. You get billed for all the provisioned capacity
+
+#### EBS - Delete on termination attribute
++ by default the root EBS volume is deleted(attribute enable)
++ by default any other attached EBS volume is not deleted (attribute is disabled)
+
+<img src='images/termination protection.png' height='100%' width='100%' >  
