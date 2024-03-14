@@ -209,7 +209,7 @@ Blocklist and Allowlist strategies
 
 ##### To restrict service control policies
 + click on aws organization and click on policies
-+ I shows 4 policies which are disable
++ It shows 4 policies which are disable
 + click service control policies-> enable service control policies
 + click service control policies
 + create new policy
@@ -324,7 +324,9 @@ Blocklist and Allowlist strategies
 #### IAM for S3
 + we have two bucket list
 + first one is list bucket and this applies to this arn right here, so s3:::test because its a bucket level permission and therefore we have to specify the bucket itself
-+ but if we have a look at GetObject, PutObject, and deleteobject this applies to objects within a bucket and therefore your arn is going to be different and you are going to have /* to represent all the objects within your buckets
++This permission allows the user to see the list of objects within the bucket.
+
++ but if we have a look at second(object level permission) GetObject, PutObject, and delete object this applies to objects within a bucket and therefore your arn is going to be different and you are going to have /* to represent all the objects within your buckets
 + this is why we have different arn because this is object level permission.
 
 
@@ -380,7 +382,7 @@ Cross account are those account which allow a principal in one account to access
 + It can be used as a combinations of AWS Organizations SCP
 The intersection of organization scp, permission boundary, identity based policy is called 'effective permissions'
 + Use cases:
-  + Delegate responsibilities to non adminisrators within their permission boundaries for example create newIAM users
+  + Delegate responsibilities to non administrators within their permission boundaries for example create newIAM users
   + allow developers to self-assign policies and a
   manage their own permissions while making sure they cant escalate their privileges
   + useful to restrict one specific user
