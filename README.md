@@ -1,4 +1,4 @@
-# AWS_Solution_Architect
+# AWS Solution Architect
 
 ## This is my journey to learn the Solution Architect.
 
@@ -6,8 +6,7 @@
 
 ## <a href="./EC2/README.md">Getting Started with EC2</a>
 
-<<<<<<< HEAD
-=======
+## <a href="./EBS Instance Storage/README.md">Getting Started with EC2</a>
 
->>>>>>> a02a661f0860225ddd9e2c513277322c4edf4a0d
+
 
