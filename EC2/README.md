@@ -102,6 +102,45 @@
 </body>
 </html>
 
+#### SSH troubleshooting
++ If things don't work like:
+   + missed something
+   + read troubleshoot guide
+   + try ec2 instance connect
+
+
+#### How to SSH into your EC2 instance for windows >= 10
++ open cmd
++ write:
+   + ssh
+   + ls
+   + cd/.Desktop
+   + mkdir EC2Tutorial.pem
+   + mkdir EC2Tutorial.pem
+   + ssh -i .\EC2Tutorial.pem
+   + we make sure the port-22 or security group is open or selected for ssh
+   + ssh -i .\EC2Tutorial.pem ec2-user@3.250.26.200
+   + permission : yes
+   + exit and clear
++ If you have permission issues:
+   + Go to desktop
+   + right click on the file EC2Tutorial
+   + properties
+   + security
+   + advance
+   + owner of this file 'click on change'
+      + object type, location, check Names
+   + Remove system, no need [principle]
+   + Disable inheritance( it mremove all inherited permissions from this object)
+   + Add
+   + select a principl
+      + Enter the object name, click on check mark which shows principle name
+      + click on full control check there and then ok
+   + OK
+
+This all are to give permission for no issue
+            
+
 ### EC2 instance Roles Demo
 + my first instance->connect
 + ec2 instance connect-> connect
