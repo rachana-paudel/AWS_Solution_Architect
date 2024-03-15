@@ -51,7 +51,7 @@ Additional statements can be added here
     + set name : developers
     + policy: choose any
     + Choose 'Create group'
-    + Click Amin group then choose user
+    + Click Admin group then choose user
     + Choose the Name created before
     + Add user
 
