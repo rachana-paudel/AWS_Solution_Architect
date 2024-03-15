@@ -384,6 +384,35 @@ The intersection of organization scp, permission boundary, identity based policy
   manage their own permissions while making sure they cant escalate their privileges
   + useful to restrict one specific user
 
+ for IAM permission boundary
+ <br>
+ {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": "iam:*",
+      "Resource": "*"
+    }
+  ]
+}
+<br>
+
+for IAM permission for IAM policy<br>
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::example-bucket/*"
+    }
+  ]
+}
+<br>
+if we use both then we get permission denied because iam is denied.
+
+
 <img src='images/iam policy evaluation logic.png' height='100%' width='100%' >
 
 
@@ -420,10 +449,19 @@ The intersection of organization scp, permission boundary, identity based policy
 
 #### Microsoft Active Directory (AD)
 + It is software found in any windows server with AD Domain services
-+ It is Database of object: user, accounts, computers, printers, file shares, security group
-+ centralized security management, create account, assign permissions
-+ objects are organized in trees
-+ a group of trees is a forest
++ Database of Objects: AD serves as a database storing various objects such as users, accounts, computers, printers, file shares, and security groups.
+
++ Centralized Security Management: It provides centralized security management, allowing administrators to create user accounts and assign permissions across the network.
+
++ Organizational Structure: Objects in AD are organized hierarchically in a tree-like structure, with each tree containing domains. Domains are logical groupings of objects within a network.
+
++ Forest in Active Directory:
+
+  + A group of trees in Active Directory is referred to as a forest.
+  + A forest is a collection of one or more domain trees that share a common schema, configuration, and global catalog.
+  + Each tree in the forest maintains a separate namespace but shares a common schema and trust relationship.
+  + Forests enable organizations to establish separate domains with their own administrative boundaries while allowing for communication and resource sharing between them.
+
 + Example:
   + we have a domain controller and create an account with username john and password= password
   + the idea that all the other windows machines we have within our network are going to be connected to domain controller, so that if we are using the john password on the first machine is going to look it up in the controller and say yes we have that login and then allow you to login in that machine
