@@ -366,10 +366,9 @@ Cross account are those account which allow a principal in one account to access
 + When a user in Account A applies an S3 bucket policy to access Amazon S3, they're setting rules directly on the bucket itself. Unlike assuming a role, where one gives up their own permissions to adopt another's, with a resource-based policy, the user doesn't have to surrender their permissions. Instead, they're simply setting rules for who can access the bucket and how. It's like installing a lock on a door; the person with the key (the user) doesn't lose their ability to open the door, they're just controlling who else can enter.
 
 ###### Difference
-+ The big difference where it comes to play is when you use Amazon EventBridge.
-+ Resource-based policy: Lambda, SNS,SQS,CloudWatch Logs, API Gateway..
-+ eg. Allow EventBridge
-+ IAM role : kinesis stream, Systems Manager Run Command, ECS task..
++ Resource-based policy: With a resource-based policy, you're directly attaching policies to specific AWS resources like Lambda functions, SNS topics, SQS queues, CloudWatch Logs, or API Gateway endpoints. For example, you can create a resource-based policy to allow Amazon EventBridge to send events to a particular SNS topic. This means the resource itself (e.g., the SNS topic) dictates who can access it, rather than the user or role.
+
++ IAM role: Conversely, when using IAM roles, you're granting permissions to entities assuming those roles. For instance, you might have an IAM role that allows a Kinesis stream, Systems Manager Run Command, or ECS task to access resources like S3 buckets or DynamoDB tables. These permissions are associated with the role itself, and entities assume the role to temporarily gain those permissions.
 
 ### IAM Permission Boundaries
 + It is supported for users and roles(not group)
@@ -389,15 +388,18 @@ The intersection of organization scp, permission boundary, identity based policy
 
 
 #### IAM Identity Center( successor to aws single sign-on)
-+ one login for all your
-  + aws accounts in aws organizations
-  + business cloud applications(eg. salesforce , box, microsoft 365,..)
-  + ec2 window instances
-  + one login access to everything
++ One login for all your:
+  + AWS accounts in AWS Organizations: AWS Organizations enables you to centrally manage and govern multiple AWS accounts. With a single login, typically through AWS Single Sign-On (SSO), users can access all AWS accounts within the organization without needing separate credentials for each account.
 
-+ Identity providers
-  + built-in identity store in IAM identity center
-  3rd party: Active directory, one login..
+  + Business cloud applications (e.g., Salesforce, Box, Microsoft 365, etc.): Similarly, through a single sign-on solution like AWS SSO or a third-party identity provider (IdP) such as Active Directory (AD) or OneLogin, users can access various business cloud applications without the need for multiple sets of credentials.
+
+  + EC2 Windows instances: For accessing EC2 Windows instances, you can leverage AWS Systems Manager's Session Manager feature, which allows secure remote shell access to EC2 instances without requiring SSH keys or opening inbound ports. Users can authenticate using AWS SSO or IAM credentials.
+
++ Identity Providers:
+
+  + Built-in identity store in IAM Identity Center: AWS IAM (Identity and Access Management) provides a built-in identity store where you can manage users and their permissions within AWS. This allows you to create and manage IAM users directly within AWS.
+
+  + Third-party Identity Providers (e.g., Active Directory, OneLogin, etc.): These are external services that manage user identities and authentication outside of AWS. For example, Active Directory is commonly used in on-premises environments and can be integrated with AWS using AWS Directory Service. Similarly, OneLogin is a cloud-based identity and access management solution that can be integrated with AWS for centralized user authentication and access control.
 
 
 <img src='images/iam identity center.png' height='100%' width='100%' >
