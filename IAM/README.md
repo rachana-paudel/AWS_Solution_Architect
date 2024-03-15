@@ -357,15 +357,13 @@ Blocklist and Allowlist strategies
 Cross account are those account which allow a principal in one account to access resources in a second account. It can be done in 2 ways
 
 1. IAM roles:
-+ In this we assign roles to the account to access the storage (amazon s3)
-+ We can set the services that can be accessible by Account A assigning the role to Account B to access Amazon S3. 
-+ When you assume a role(user,application or service), you give up your original permission and take the permissions assigned to the role
-+ When using
++ Certainly! Imagine you have two accounts: Account A and Account B. Account A wants to access Amazon S3 (a storage service), but it doesn't have permission. So, what you do is you assign a special role (think of it like a set of permissions) to Account B that allows it to use Amazon S3.
+
++ Now, when someone from Account A wants to use Amazon S3, they don't directly use their own permissions. Instead, they "put on" the permissions of Account B by assuming the role assigned to it. In simple terms, assuming a role means you're temporarily swapping your own permissions for the ones assigned to that role. It's like borrowing someone else's keys to open a door because yours won't work. Once you're done using the borrowed permissions, you go back to using your own.
 
 
 2. Resource based policies
-+ User in Account A apply S3 bucket policy to access Amazon S3
-+ When using a resource-based policy, the principal does not have to give up his permission
++ When a user in Account A applies an S3 bucket policy to access Amazon S3, they're setting rules directly on the bucket itself. Unlike assuming a role, where one gives up their own permissions to adopt another's, with a resource-based policy, the user doesn't have to surrender their permissions. Instead, they're simply setting rules for who can access the bucket and how. It's like installing a lock on a door; the person with the key (the user) doesn't lose their ability to open the door, they're just controlling who else can enter.
 
 ###### Difference
 + The big difference where it comes to play is when you use Amazon EventBridge.
