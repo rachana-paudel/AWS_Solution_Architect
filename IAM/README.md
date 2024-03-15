@@ -64,7 +64,7 @@ Additional statements can be added here
 + prevent password reuse
 
 #### Multifactor Authentication
-+ User can change,delete resource to protect root and IAM users
++ User can change, delete resource to protect root and IAM users
 + MFA= password we know + security devices like Google authenticator(For virtual) and Universal 2F authentication where physical device is used.
 
 #### How can user access AWS?
@@ -359,7 +359,7 @@ Cross account are those account which allow a principal in one account to access
 1. IAM roles:
 + In this we assign roles to the account to access the storage (amazon s3)
 + We can set the services that can be accessible by Account A assigning the role to Account B to access Amazon S3. 
-+ When you assume a role(user,application or service), you give yp your original permission and take the permissions assigned to the role
++ When you assume a role(user,application or service), you give up your original permission and take the permissions assigned to the role
 + When using
 
 
