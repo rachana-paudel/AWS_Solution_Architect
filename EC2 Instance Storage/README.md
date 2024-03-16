@@ -83,3 +83,26 @@
 + It is not necessary to detach a volume to do snapshot but it is recommended.
 + Availability Zones (AZs) are distinct locations within a region, each comprising one or more data centers with independent power, cooling, and networking infrastructure.
 + AWS allows users to copy snapshots of EBS volumes across different AZs within the same region or even across regions.
++ Example: you can use ebs volume to 1 instance and take a snapshot and restore it to another instance of another AZs
+
+#### EBS Snapshots Features
++ EBS Snapshot Archive:
+    This feature allows you to store snapshots of your EBS volumes in a long-term, cost-effective manner.
+
++ Move a Snapshot to an "Archive Tier":
+    You can transfer snapshots to a lower-cost storage tier, typically around 75% cheaper than regular storage. This is useful for data that doesn't need to be accessed frequently.
+
++ Restoration Time:
+ Snapshots stored in the archive tier can take between 24 to 72 hours to restore, so it's best suited for data that isn't needed immediately.
+
++ Recycle Bin for EBS Snapshots:
+    You can set up a recycle bin for EBS snapshots, ensuring that deleted snapshots are retained for a specified period before permanent deletion.
+
++ Retain Deleted Snapshots:
+    You can define rules to retain deleted snapshots for a specified duration, ranging from 1 day to 1 year, allowing you to recover them if needed.
+
++ Fast Snapshot Restore (FSR):
+    This feature accelerates the restoration of snapshots by pre-warming the underlying EBS volumes, reducing latency upon first use.
+
++ Force Full Initialization:
+    This ensures that when a snapshot is used for the first time, there's no latency as all necessary data is immediately available but little costly
