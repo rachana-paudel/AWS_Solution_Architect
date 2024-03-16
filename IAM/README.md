@@ -511,12 +511,12 @@ Using AD you can create ec2 instances that are going to be run in windows and th
 #### AWS Control Tower - Guardrails
 + provides ongoing governance for your control tower environment
 + There are 2 kinds of guardrails
-  +  Preventive Guardrails:
+  a.  Preventive Guardrails:
     Preventive guardrails aim to prevent accounts from performing certain actions that could lead to security risks or non-compliance.
     These guardrails typically use Service Control Policies (SCPs), which are applied at the AWS Organizations level to enforce restrictions across all accounts within your AWS environment.
     For example, you can use SCPs to restrict certain AWS regions, limit access to specific services, or enforce encryption requirements.
 
-b. Detective Guardrails:
+  b. Detective Guardrails:
     Detective guardrails focus on detecting non-compliance or potential security issues within your AWS environment.
     These guardrails leverage services like AWS Config to monitor resource configurations and changes.
     For instance, you can set up detective guardrails to detect untagged resources, unauthorized IAM permissions, or non-compliant configurations.
