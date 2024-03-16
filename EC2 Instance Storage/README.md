@@ -106,3 +106,45 @@
 
 + Force Full Initialization:
     This ensures that when a snapshot is used for the first time, there's no latency as all necessary data is immediately available but little costly
+
+#### Lab
++ Create Snapshot:
+    + Click on "Volume" in the AWS Management Console.
+    + Select the desired volume.
+    + Choose "Actions" and then "Create Snapshot."
+    + Provide a description, such as "demosnapshot," and confirm to + create the snapshot.
+
++ Copy Snapshot to Another Region:
+   +  Navigate to "Snapshots" from the left-side menu.
+   +  Right-click on the snapshot you want to copy.
+    + Select "Copy Snapshot" and specify the destination region.
+
++ Create Volume from Snapshot:
+    + Navigate to "Snapshots" from the left-side menu.
+    + Select the desired snapshot.
+    + Choose "Actions" and then "Create Volume from Snapshot."
+
++ Set Up Retention for Deleted Snapshots:
+    + Navigate to "Snapshots" from the left-side menu.
+    + Click on "Recycle Bin."
+    + Create a retention rule by clicking "Create Retention Rule."
+    + Provide a name like "demoretention," select "EBS snapshots" as the resource type, and check "Apply to all resources." Then, + create the retention rule.
+
++ Manage Snapshots in the Recycle Bin:
+    + Navigate to "Snapshots" from the left-side menu.
+    + Click on "Recycle Bin" to view deleted snapshots.
+    + From here, you can select the deleted snapshot you want to recover and choose "Recover" to restore it.
+
++ Archive or Delete Snapshots:
+    + Navigate to "Snapshots" from the left-side menu.
+    + Select the snapshot you want to archive or delete.
+    + Choose "Actions" and then either "Archive Snapshot" or "Delete Snapshot" as per your requirement.
+
++ Access the Recycle Bin:
+    + Navigate to "Snapshots" from the left-side menu in the AWS Management Console.
+    + Click on "Recycle Bin" to access the list of deleted snapshots.
+
++ Recover a Deleted Snapshot:
+    + In the recycle bin, locate the snapshot you want to recover.
+    + Select the deleted snapshot you wish to restore.
+    + Choose the "Recover" option. This action will initiate the recovery process for the selected snapshot.
