@@ -410,7 +410,7 @@ for IAM permission for IAM policy<br>
   ]
 }
 <br>
-if we use both then we get permission denied because iam is denied.
+if we use both then we get permission denied because iam is denied but can use ec2 becuase that is not denied.
 
 
 <img src='images/iam policy evaluation logic.png' height='100%' width='100%' >
@@ -511,8 +511,17 @@ Using AD you can create ec2 instances that are going to be run in windows and th
 #### AWS Control Tower - Guardrails
 + provides ongoing governance for your control tower environment
 + There are 2 kinds of guardrails
-  + Preventive guardrails - to prevent from accounts for doing something and therefore they are restricted. And so we are going to use SCP, so service control policies,from aws organizations policies to apply them to all our accounts(restrict regions across all your accounts)
-  + Detective guardrails- using aws config(eg. identity untagged resources). just to detect non-compliance. 
+  +  Preventive Guardrails:
+    Preventive guardrails aim to prevent accounts from performing certain actions that could lead to security risks or non-compliance.
+    These guardrails typically use Service Control Policies (SCPs), which are applied at the AWS Organizations level to enforce restrictions across all accounts within your AWS environment.
+    For example, you can use SCPs to restrict certain AWS regions, limit access to specific services, or enforce encryption requirements.
+
+b. Detective Guardrails:
+    Detective guardrails focus on detecting non-compliance or potential security issues within your AWS environment.
+    These guardrails leverage services like AWS Config to monitor resource configurations and changes.
+    For instance, you can set up detective guardrails to detect untagged resources, unauthorized IAM permissions, or non-compliant configurations.
+
+Both preventive and detective guardrails work together to provide ongoing governance and compliance for your AWS Control Tower environment. Preventive guardrails help enforce policies proactively, while detective guardrails help identify and address compliance issues after the fact.
 
 <img src='images/control tower.png' height='100%' width='100%' >  
 
