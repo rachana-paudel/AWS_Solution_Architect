@@ -131,7 +131,7 @@
    + owner of this file 'click on change'
       + object type, location, check Names
    + Remove system, no need [principle]
-   + Disable inheritance( it mremove all inherited permissions from this object)
+   + Disable inheritance( it remove all inherited permissions from this object)
    + Add
    + select a principl
       + Enter the object name, click on check mark which shows principle name
@@ -271,7 +271,7 @@ There are two types of request
  + When we want to have a control of how ec2 instance going to be placed so we use placement group
  + we can do it in 3 ways are:
   1. Cluster
-     + since many ec2 instances are in same rack( hardware) it decreases latency and perform high speed 10Gbps bandwith between instances, high networking performance
+     + since many ec2 instances are in same rack( hardware) it decreases latency and perform high speed 10Gbps bandwidth between instances, high networking performance
      + if the rack fails all instances fail at the same time
 
    2. Spread
@@ -304,7 +304,7 @@ There are two types of request
 
 #### Elastic Network Interfaces(ENI)
 + ENI is a logical component in a VPC that represent a virtual card
-+ They are what gives ec2 instances access to the network abd acn be used outside the ec2 instances as well
++ They are what gives ec2 instances access to the network. It be used outside the ec2 instances as well
 + example we have 1 A.Z and 1 ec2 instance and to it is attached on eth0, your primary ENI which provide your EC2 instance network connectivity and Private IP
 + we cana lso have secondary ENI with eth1
 + It can have primary private ipv4, one or more secondary ipv4
