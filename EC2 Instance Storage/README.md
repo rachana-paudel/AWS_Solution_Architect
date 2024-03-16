@@ -29,36 +29,50 @@
 <img src='images/termination protection.png' height='100%' width='100%' >  
 
 #### Lab
-+ Click on Instance-> storage tab on bottom-> you can see volume->click on volume(to see detail)
-+ In left side click volumes->create volume(from right side)->volume type(General purpose ssd)->AZs:eu-west-1b because previous volume has also same->refresh->we can see detail nd see it is available->action:attach volume->instance: ......that we already have of same AZs-> click attach volume
-+ storage->block devices(we have 2 block devices)
-+ again create volume for different AZs let say eu-west-1a -> create volume-> action->attach volume: we cannot tach because  we don't have instance for new AZs we have created this time.
 + Accessing the Storage Tab:
-
-    + Navigate to the "Instance" dashboard.
+    + Navigate(move through or interact) to the "Instance" dashboard.
     + Click on the "Storage" tab at the bottom.
+
 + Viewing Volume Details:
-
     + Locate the volume you want to view details for and click on it.
-+ Creating a Volume:
 
++ Creating a Volume:
     + Click on "Volumes" on the left side.
     + Select "Create Volume" from the right side.
     + Specify the volume type, such as "General Purpose SSD."
     + Choose the Availability Zone (AZ), such as "eu-west-1b" to match the previous volume.
     + Click "Refresh" to ensure the volume is available.
-+ Attaching the Volume:
 
++ Attaching the Volume:
     + Under "Actions," select "Attach Volume."
     + Choose the instance to attach the volume to. Ensure it's in the same AZ as the volume.
     + Click "Attach Volume."
-+ Viewing Block Devices:
 
++ Viewing Block Devices:
     + Navigate back to the "Storage" tab.
     + Look under "Block Devices" to see the attached volumes.
+
 + Creating Another Volume for a Different AZ:
-
     + Repeat the volume creation process, but this time choose a different AZ, like "eu-west-1a."
-+  Attempting to Attach the Volume to an Instance:
 
++  Attempting to Attach the Volume to an Instance:
     + When attempting to attach the newly created volume, you'll find that there are no instances available in the new AZ ("eu-west-1a") because you only have instances in the previous AZ ("eu-west-1b").
+
++  Availability Check:
+    + After attempting to attach the volume to an instance in a different Availability Zone (AZ) and finding it's not available, you decide to delete the volume.
+
++ Deleting the Volume:
+    + Navigate to the volume in question.
+    + Choose "Actions."
+    + Select "Delete Volume."
+    + Confirm the deletion.
+
++ Updating Block Device Settings:
+    + Go to the "Storage" tab.
+    + Navigate to "Block Devices."
+    + Verify that the first volume has "Delete on Termination" set to "Yes."
+
++ Changing "Delete on Termination" Setting:
+    + To change the "Delete on Termination" setting, go to the "Launch Instance" section.
+    + Find the option to configure storage settings.
+    + Adjust the setting for the volume to "Delete on Termination: No."
