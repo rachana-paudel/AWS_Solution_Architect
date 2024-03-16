@@ -76,3 +76,10 @@
     + To change the "Delete on Termination" setting, go to the "Launch Instance" section.
     + Find the option to configure storage settings.
     + Adjust the setting for the volume to "Delete on Termination: No."
+
+#### EBS Snapshots
++ EBS snapshot is used to make a backup of your EBS volume at a point of time.    
++ snapshot captures the data and configuration of instances
++ It is not necessary to detach a volume to do snapshot but it is recommended.
++ Availability Zones (AZs) are distinct locations within a region, each comprising one or more data centers with independent power, cooling, and networking infrastructure.
++ AWS allows users to copy snapshots of EBS volumes across different AZs within the same region or even across regions.
