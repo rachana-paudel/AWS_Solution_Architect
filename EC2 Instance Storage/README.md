@@ -152,7 +152,7 @@
 #### AMI(Amazon Machine Image) 
 + Customization: AMIs allow users to customize EC2 instances with their own software, configuration, operating system, and monitoring tools. This customization facilitates the creation of environments tailored to specific requirements.
 
-+ Boot and Configuration Time: AMIs expedite boot and configuration processes because all necessary software is pre-packaged within the image. This streamlines the setup of new instances and reduces deployment time.
++ Boot and Configuration Time: AMIs speedup boot and configuration processes because all necessary software is pre-packaged within the image. This streamlines the setup of new instances and reduces deployment time.
 
 + Region Specificity: AMIs are built for a specific AWS region. However, they can be copied across regions, enabling deployment in multiple geographic locations to meet global needs.
 
@@ -161,3 +161,10 @@
     + Public AMIs: Provided by AWS, these offer a range of pre-configured environments and operating systems.
     + Custom AMIs: Users create and maintain these images themselves, tailoring them to their specific applications and requirements.
     + AWS Marketplace AMIs: Offered by third-party vendors, these AMIs provide pre-configured solutions for various purposes, potentially including paid offerings.
+
+#### AMI Process
++ Start an EC2 instance and customize it
++ Stop the instance (for data integrity)
++ Build an AMI – this will also create EBS snapshots
++ Launch instances from other AMIs
++ We can create AMI customize it and launch to another AZ from AMI    
