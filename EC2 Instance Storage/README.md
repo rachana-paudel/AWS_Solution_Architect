@@ -208,3 +208,13 @@ Use Cases:
     + uSb-millisecond latency.
     + Max PIOPS of 256,000 with an IOPS:GiB ratio of 1,000:1.
     + Supports EBS Multi-attach.
+
+3. Hard Disk Drives (HDD) (st1/sc1):
+Use Cases:
++ Throughput Optimized HDD (st1): Suitable for big data, data warehouses, log processing where high throughput is crucial.
++ Cold HDD (sc1): For infrequently accessed data or scenarios prioritizing cost-effectiveness.
++ Volume Range: 125 GiB to 16 TiB for both st1 and sc1.
++ Throughput Optimized HDD (st1) Characteristics:
+    + Max throughput of 500 MiB/s and max IOPS of 500.
++ Cold HDD (sc1) Characteristics:
+    + Max throughput of 250 MiB/s and max IOPS of 250.    
