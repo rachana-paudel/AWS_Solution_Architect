@@ -195,3 +195,16 @@ Use Cases:
     + Small gp2 volumes can burst IOPS to 3,000.
     + IOPS are linked to the size of the volume, with a maximum of 16,000 IOPS.
     + Follows the 3 IOPS per GB rule, reaching max IOPS at 5,334 GB.
+
+2. Provisioned IOPS (PIOPS) SSD (io1/io2):
+Use Cases:
++ Critical business applications requiring sustained IOPS performance or needing more than 16,000 IOPS.
++ Ideal for database workloads sensitive to storage performance and consistency.
++ Volume Range: 4 GiB - 16 TiB for io1, 4 GiB - 64 TiB for io2 Block Express.
++ io1 Characteristics:
+    + Max PIOPS of 64,000 for Nitro EC2 instances & 32,000 for others.
+    + PIOPS can be increased independently from storage size.
++ io2 Block Express Characteristics:
+    + uSb-millisecond latency.
+    + Max PIOPS of 256,000 with an IOPS:GiB ratio of 1,000:1.
+    + Supports EBS Multi-attach.
