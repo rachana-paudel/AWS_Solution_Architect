@@ -34,7 +34,7 @@
 
 3. Memory optimized
 + Series of R like r5.large
-+ fast performance for workload, high performance, perform real time processing og big unstructured data.
++ fast performance for workload, high performance, perform real time processing of big unstructured data.
 
 4. Storage optimized
 + family start with 'D' ,'H' and 'I' like i3.large
@@ -306,7 +306,7 @@ There are two types of request
 + ENI is a logical component in a VPC that represent a virtual card
 + They are what gives ec2 instances access to the network. It be used outside the ec2 instances as well
 + example we have 1 A.Z and 1 ec2 instance and to it is attached on eth0, your primary ENI which provide your EC2 instance network connectivity and Private IP
-+ we cana lso have secondary ENI with eth1
++ we can also have secondary ENI with eth1
 + It can have primary private ipv4, one or more secondary ipv4
 + 1 elastic ipv4 per private ipv4
 + 1 or more security group
@@ -319,7 +319,7 @@ There are two types of request
 + Lets create 2 instances
 + When scroll down to network interface we can se 'Interface ID, pubic , private IPV4, ....etc
 + we can also create a new network interface
-+ In the left hand side there is 'Nework interface' click on that and create new network interface
++ In the left hand side there is 'Network interface' click on that and create new network interface
 + Description: DemoENI
 + Subnet: ....
 + Private IPV4 address: auto assign
@@ -339,8 +339,8 @@ There are two types of request
 + it is much faster because it is just freezed the OS is not stopped or restarted.
 + USe cases: long running processing, saving the RAM, services that take time to initialize
 + Lets take ec2 instance that is running and the data is in RAM then we start the hibernation process  
-+ Then the instance will go in the stopping state and the RAM is goint to be dumped into your EBS volume
-+ The the instance is hut down and the RAM disappears because as soon as you stop an instance the RAM goes away, but the EBS volume still contains the dump of the RAM
++ Then the instance will go in the stopping state and the RAM is going to be dumped into your EBS volume
++ Then the instance is shut down and the RAM disappears because as soon as you stop an instance the RAM goes away, but the EBS volume still contains the dump of the RAM
 + And then when the instance is started, then the RAM is going to be loaded onto the EC2 instance memory And that means that it is just as is your ec2 instance never got stopped
 
 <img src='images/hibernation-flow.png' height='100%' width='100%' alt='Hibernation Flow Diagram'>
