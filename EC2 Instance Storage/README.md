@@ -148,3 +148,16 @@
     + In the recycle bin, locate the snapshot you want to recover.
     + Select the deleted snapshot you wish to restore.
     + Choose the "Recover" option. This action will initiate the recovery process for the selected snapshot.
+
+#### AMI(Amazon Machine Image) 
++ Customization: AMIs allow users to customize EC2 instances with their own software, configuration, operating system, and monitoring tools. This customization facilitates the creation of environments tailored to specific requirements.
+
++ Boot and Configuration Time: AMIs expedite boot and configuration processes because all necessary software is pre-packaged within the image. This streamlines the setup of new instances and reduces deployment time.
+
++ Region Specificity: AMIs are built for a specific AWS region. However, they can be copied across regions, enabling deployment in multiple geographic locations to meet global needs.
+
++ Launch Options: Users can launch EC2 instances from various types of AMIs:
+
+    + Public AMIs: Provided by AWS, these offer a range of pre-configured environments and operating systems.
+    + Custom AMIs: Users create and maintain these images themselves, tailoring them to their specific applications and requirements.
+    + AWS Marketplace AMIs: Offered by third-party vendors, these AMIs provide pre-configured solutions for various purposes, potentially including paid offerings.
