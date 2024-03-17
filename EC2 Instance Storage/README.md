@@ -167,4 +167,31 @@
 + Stop the instance (for data integrity)
 + Build an AMI – this will also create EBS snapshots
 + Launch instances from other AMIs
-+ We can create AMI customize it and launch to another AZ from AMI    
++ We can create AMI customize it and launch to another AZ from AMI 
+
+#### Lab
++ After creating an instance -> right click on instance-> create image-> image name :Demoimage->create image
++ click on AMi from left side, Demoimage is registered
++ We can now launch instances from the AMI or direct from instance
++ launch instance -> instance name :from AMI -> Application and OS image(AMI): My AMIs: owned by me-> AMI :Demoimage-> perform other operation like selection or edit of network, user data etc. -> launch instance
+
+#### EC2 Instance Store
++ EBS volumes offer good but "limited" performance as network drives.
++ For high-performance hardware disk needs, EC2 Instance Store is recommended due to better I/O performance.
++ EC2 Instance Store disks are ephemeral, meaning they lose their data if the instance is stopped or terminated.
++ They are suitable for buffer, cache, scratch data, or temporary storage purposes.
++ Ideal for scenarios where data persistence isn't critical and fast I/O capabilities are required for efficient handling of temporary workloads or large data volumes within a single session.
+
+#### EBS Volume types
+1. General Purpose SSD (gp2/gp3):
+Use Cases:
++ Cost-effective storage with low-latency requirements.
++ Suitable for system boot volumes, virtual desktops, development, and test environments.
++ Volume Range: 1 GiB - 16 TiB.
++ gp3 Characteristics:
+    + Baseline of 3,000 IOPS and throughput of 125 MiB/s.
+    + Can independently increase IOPS up to 16,000 and throughput up to 1000 MiB/s.
++ gp2 Characteristics:
+    + Small gp2 volumes can burst IOPS to 3,000.
+    + IOPS are linked to the size of the volume, with a maximum of 16,000 IOPS.
+    + Follows the 3 IOPS per GB rule, reaching max IOPS at 5,334 GB.
