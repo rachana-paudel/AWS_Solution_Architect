@@ -267,3 +267,28 @@ do)
 + Encryption at rest using KMS
 + POSIX file system (~Linux) that has a standard file API
 + File system scales automatically, pay-per-use, no capacity planning
+
+#### EFS -Performance and Storage Classes
++ EFS Scale:
+    + Amazon EFS is designed to scale seamlessly to accommodate thousands of concurrent NFS clients and support throughput of over 10 GB/s. It can grow to petabyte-scale network file systems automatically, providing high scalability and performance for large-scale workloads.
+
++ Performance Mode:
+    Performance mode is set at the time of EFS creation and determines how the file system prioritizes latency and throughput.
+
++ General Purpose (Default): 
+    + Suitable for latency-sensitive use cases such as web servers and content management systems (CMS). It provides balanced performance for a wide range of workloads.
+
++ Max I/O: 
+    Optimized for high throughput and parallel access, making it suitable for big data processing and media processing workloads. This mode may have higher latency compared to the General Purpose mode.
+
++ Throughput Mode:
+    Throughput mode defines how the file system's throughput scales based on the amount of data stored and accessed.
+
++ Bursting: 
+    Provides a baseline throughput of 50 MiB/s per TB of storage, with the ability to burst up to 100 MiB/s. Bursting mode is suitable for workloads with sporadic or variable access patterns.
+
++ Provisioned: 
+    Allows you to set a specific throughput regardless of the storage size. For example, you can provision 1 GiB/s throughput for 1 TB of storage. This mode is beneficial for workloads that require consistent throughput.
+
++ Elastic: 
+    Automatically scales throughput up or down based on workload demands. It can provide up to 3 GiB/s for reads and 1 GiB/s for writes, making it suitable for unpredictable workloads with fluctuating performance requirements.
