@@ -232,3 +232,16 @@ operations
 + Up to 16 EC2 Instances at a time
 + Must use a file system that’s cluster-aware (not 
 XFS, EXT4, etc…)    
+
+#### EBS Encryption
++  When you create an encrypted EBS volume, you get the following:
++  Data at rest is encrypted inside the volume
++  All the data in flight moving between the instance and the volume is encrypted
++  All snapshots are encrypted
++  All volumes created from the snapshot
++  Encryption and decryption are handled transparently (you have nothing to 
+do)
++  Encryption has a minimal impact on latency
++  EBS Encryption leverages keys from KMS (AES-256)
++  Copying an unencrypted snapshot allows encryption
++  Snapshots of encrypted volumes are encrypted
