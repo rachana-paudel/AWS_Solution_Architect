@@ -250,3 +250,11 @@ do)
 + create volume -> fill other detail like Gb of storage and AZ -> Encryption: Check on encrypt this volume -> create volume ( encryption is not shown in detail)
 + action-> create snapshot -> again the no encryption so -> action: copy snapshot -> write description, region and check on encrypt this snapshot-> click on copy snapshots 
 + from this snapshot we can create volume -> action : create volume from snapshot -> create volume
++ delete volume and snapshot 
+
+#### Managed NFS: 
++ Managed NFS (network file system) that can be mounted on many EC2
++ EFS works with EC2 instances in multi-AZ
++ Highly available, scalable, expensive (3x gp2), pay per us
+
+<img src='images/efs file system.png' height='100%' width='100%' >  
