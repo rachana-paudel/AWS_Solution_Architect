@@ -245,3 +245,8 @@ do)
 +  EBS Encryption leverages keys from KMS (AES-256)
 +  Copying an unencrypted snapshot allows encryption
 +  Snapshots of encrypted volumes are encrypted
+
+#### Lab
++ create volume -> fill other detail like Gb of storage and AZ -> Encryption: Check on encrypt this volume -> create volume ( encryption is not shown in detail)
++ action-> create snapshot -> again the no encryption so -> action: copy snapshot -> write description, region and check on encrypt this snapshot-> click on copy snapshots 
++ from this snapshot we can create volume -> action : create volume from snapshot -> create volume
