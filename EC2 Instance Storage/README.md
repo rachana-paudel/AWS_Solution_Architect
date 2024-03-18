@@ -292,3 +292,25 @@ do)
 
 + Elastic: 
     Automatically scales throughput up or down based on workload demands. It can provide up to 3 GiB/s for reads and 1 GiB/s for writes, making it suitable for unpredictable workloads with fluctuating performance requirements.
+
+#### Standard Tier:
+
++ Suitable for frequently accessed files.
+    + Offers high availability and durability across multiple 
+    + Availability Zones.
++ Infrequent Access (EFS-IA) Tier:
+    + Designed for less frequently accessed files.
+    + Lower storage costs but incurs retrieval costs.
+    + Enabled via a Lifecycle Policy to automatically move files after a set period of inactivity.
++ Availability and Durability:
+    + Standard Tier: Multi-AZ redundancy for production workloads.
+    + One Zone: Single AZ storage suitable for development, with backup enabled by default.
++ Cost Savings:
+    + Over 90% savings possible by utilizing storage tiers and appropriate availability options.
+    + EFS-IA and One Zone options help optimize costs while maintaining data availability and durability.
+
+
+
+
+
+    
