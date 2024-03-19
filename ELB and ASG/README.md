@@ -23,3 +23,19 @@ by adapting.
 + Commonly used for distributed systems, such as web applications.
 + Easily achieved with cloud offerings like Amazon EC2, where you can spin up multiple instances as needed.
 + Horizontal scalability allows the workload to be distributed across multiple machines, increasing overall capacity and redundancy.
+
+#### High Availability (HA) and Horizontal Scaling:
+
++ High Availability (HA):
+
+    + Often coupled with horizontal scaling.
+    + Involves running the system in at least 2 data centers (Availability Zones).
+    + Goal: Survive a data center loss to maintain operational continuity.
+
++ Passive HA:
+    + Example: RDS Multi-AZ.
+    + Standby resources are activated during failures.
+
++ Active HA with Horizontal Scaling:
+    + Distributes workload across multiple active instances.
+    + Load balancers manage traffic distribution for scalability and redundancy.
