@@ -8,5 +8,6 @@
 
 ## <a href="./EC2 Instance Storage/README.md">Getting Started with EC2 Instance Storage</a>
 
+## <a href="./ELB and ASG/README.md">Getting Started with ELB and ASG</a>
 
 
