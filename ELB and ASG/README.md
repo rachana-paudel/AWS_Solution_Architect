@@ -39,3 +39,27 @@ by adapting.
 + Active HA with Horizontal Scaling:
     + Distributes workload across multiple active instances.
     + Load balancers manage traffic distribution for scalability and redundancy.
+
+#### 
++ Vertical Scaling:
+    + Increasing the size of a single EC2 instance by upgrading its specifications.
+    + Example: Upgrading from a small instance like t2.nano to a large one like u-12tb1.metal, which offers significantly more resources.
+
++ Horizontal Scaling:
+    + Increasing the number of EC2 instances to handle increased load or traffic.
+    + Achieved using Auto Scaling Groups, which automatically adjust the number of instances based on predefined conditions.
+
++ Load Balancer:
+    + Distributes incoming traffic across multiple EC2 instances to ensure optimal resource utilization and availability.
+    + Helps in horizontal scaling by evenly distributing workload among instances.
+
++ High Availability:
+    + Ensures continuous operation and minimizes downtime by deploying EC2 instances across multiple Availability Zones (AZs).
+    + Auto Scaling Groups can be configured to launch instances in multiple AZs for redundancy and fault tolerance.
+    + Load Balancers can also be set up to route traffic to instances in different AZs for improved availability and reliability.
+
+
+
+
+
+    
