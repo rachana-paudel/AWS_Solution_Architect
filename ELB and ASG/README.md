@@ -63,3 +63,25 @@ by adapting.
 + Load Balances are servers that forward traffic to multiple 
 servers (e.g., EC2 instances) downstream
 <img src='images/elb.png' height='100%' width='100%' >
+
+
+
+#### Why use a load balancer?
+
++ Spread load across multiple downstream instances: Balances incoming traffic across multiple servers, preventing any single server from being overwhelmed.
+
++ Expose a single point of access (DNS) to your application: Simplifies access for users by providing a single entry point to the application.
+
++ Seamlessly handle failures of downstream instances: Detects and redirects traffic away from failed or unhealthy servers, ensuring continuous service availability.
+
++ Do regular health checks to your instances: Monitors the health of downstream servers and removes unhealthy instances from the pool of available servers.
+
++ Provide SSL termination (HTTPS) for your websites: Terminates SSL connections at the load balancer, reducing the processing load on backend servers and simplifying SSL certificate management.
+
++ Enforce stickiness with cookies: Maintains session persistence by directing subsequent requests from a client to the same backend server, which can be useful for stateful applications.
+
++ High availability across zones: Distributes traffic across multiple data centers or availability zones to improve reliability and fault tolerance.
+
++ Separate public traffic from private traffic: Acts as a gateway, separating incoming public traffic from internal/private traffic, enhancing security and network segmentation.
+
+    
