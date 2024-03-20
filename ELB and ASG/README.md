@@ -59,7 +59,7 @@ by adapting.
     + Load Balancers can also be set up to route traffic to instances in different AZs for improved availability and reliability.
 
 
-
-
-
-    
+#### Load Balancing
++ Load Balances are servers that forward traffic to multiple 
+servers (e.g., EC2 instances) downstream
+<img src='images/elb.png' height='100%' width='100%' >
