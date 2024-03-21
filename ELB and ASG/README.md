@@ -128,6 +128,7 @@ are available to reply to requests
 
 + Support for Redirects: ALBs can be configured to perform redirects, allowing you to seamlessly redirect HTTP requests to HTTPS for improved security or to different URLs as needed. This feature is particularly useful for enforcing HTTPS for secure communication between clients and servers.
 
+
 Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities that make them an ideal choice for modern microservices and container-based applications. Here's a detailed explanation:
 1. Routing Tables to Different Target Groups:
     + ALBs support routing traffic to different target groups based on various criteria, including URL path, hostname, query strings, and headers. This allows for fine-grained control over how incoming requests are distributed to backend services.
@@ -145,13 +146,32 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
     + ALBs are well-suited for microservices and container-based architectures due to their flexible routing capabilities and seamless integration with container orchestration platforms like Docker and Amazon ECS. They can efficiently distribute traffic across multiple containers or microservices running on different instances or tasks.
 
 6. Port Mapping Feature for ECS:
-
     + ALBs offer a port mapping feature specifically designed for Amazon ECS, allowing containers within ECS tasks to dynamically bind to different ports. This eliminates the need to manage port conflicts manually and simplifies the deployment of containerized applications.
 
 7. Comparison with Classic Load Balancers (CLBs):
     + In contrast to ALBs, which support multiple routing criteria and flexible target group configurations, CLBs are limited in their routing capabilities. To achieve similar functionality as ALBs, multiple CLBs would be required per application, leading to increased complexity and management overhead.
 
     <img src='images/ALB.png' height='100%' width='100%' >
+
+##### ALB Target group
+1. EC2 Instances (Managed by an Auto Scaling Group) - HTTP:
+    + ALB can distribute incoming HTTP traffic to EC2 instances within an Auto Scaling Group. This allows for dynamic scaling of resources based on demand, ensuring consistent performance and availability of the application.
+
+2. ECS Tasks (Managed by ECS Itself) - HTTP:
+    + ALB seamlessly integrates with Amazon Elastic Container Service (ECS) to route HTTP traffic to containers running as tasks. This simplifies the deployment and management of containerized applications, providing efficient traffic distribution across ECS tasks.
+
+3. Lambda Functions - HTTP Request is Translated into a JSON Event:
+    + ALB supports routing HTTP requests directly to AWS Lambda functions. When a request is received, ALB converts it into a JSON event and invokes the corresponding Lambda function. This enables serverless architectures and allows for seamless integration of Lambda functions with HTTP-based applications.
+
+4. IP Addresses - Must Be Private IPs:
+    + ALB can route traffic to IP addresses, but they must be private IPs. This is particularly useful for directing traffic to backend resources within a Virtual Private Cloud (VPC), ensuring secure communication within the network.
+
+5. Routing to Multiple Target Groups:
+    + ALB offers the flexibility to route incoming requests to multiple target groups based on defined rules. This enables sophisticated traffic management scenarios, such as blue-green deployments, canary releases, or A/B testing, where different versions of the application are served from separate target groups.
+
+6. Health Checks at the Target Group Level:
+    + Health checks for ALB are configured at the target group level. ALB periodically checks the health of individual targets within a target group to ensure that only healthy instances, tasks, or Lambda functions receive traffic. This ensures high availability and reliability of the application by automatically removing unhealthy targets from the load balancer's rotation.
+
 
 3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
 + External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
