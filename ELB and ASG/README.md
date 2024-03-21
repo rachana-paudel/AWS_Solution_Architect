@@ -97,6 +97,9 @@ servers (e.g., EC2 instances) downstream
 
 + Integration with AWS Services: ELB seamlessly integrates with various AWS offerings and services such as EC2, EC2 Auto Scaling Groups, Amazon ECS, AWS Certificate Manager (ACM), CloudWatch, Route 53, AWS WAF (Web Application Firewall), and AWS Global Accelerator, simplifying the setup and management of complex architectures.
 
+
+<img src='images/load balancer security group.png' height='100%' width='100%' >
+
 #### Health Checks
 +  Health Checks are crucial for Load Balancers
 + They enable the load balancer to know if instances it forwards traffic to 
@@ -147,6 +150,8 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 
 7. Comparison with Classic Load Balancers (CLBs):
     + In contrast to ALBs, which support multiple routing criteria and flexible target group configurations, CLBs are limited in their routing capabilities. To achieve similar functionality as ALBs, multiple CLBs would be required per application, leading to increased complexity and management overhead.
+
+    <img src='images/ALB.png' height='100%' width='100%' >
 
 3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
 + External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
