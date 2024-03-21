@@ -172,6 +172,7 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 6. Health Checks at the Target Group Level:
     + Health checks for ALB are configured at the target group level. ALB periodically checks the health of individual targets within a target group to ensure that only healthy instances, tasks, or Lambda functions receive traffic. This ensures high availability and reliability of the application by automatically removing unhealthy targets from the load balancer's rotation.
 
+<img src='images/ALB Routing.png' height='100%' width='100%' >
 
 3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
 + External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
