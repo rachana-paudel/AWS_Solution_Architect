@@ -97,6 +97,13 @@ servers (e.g., EC2 instances) downstream
 
 + Integration with AWS Services: ELB seamlessly integrates with various AWS offerings and services such as EC2, EC2 Auto Scaling Groups, Amazon ECS, AWS Certificate Manager (ACM), CloudWatch, Route 53, AWS WAF (Web Application Firewall), and AWS Global Accelerator, simplifying the setup and management of complex architectures.
 
+#### Health Checks
++  Health Checks are crucial for Load Balancers
++ They enable the load balancer to know if instances it forwards traffic to 
+are available to reply to requests
++ The health check is done on a port and a route (/health is common)
++ If the response is not 200 (OK), then the instance is unhealthy
+
 #### Types of Load Balancer
 1. Classic Load Balancer (CLB) (vI-old generation)-2009:
 + External (Public) CLB: Routes incoming traffic from the internet to the instances in your VPC. It has a public DNS name and public IP addresses.
@@ -108,6 +115,16 @@ servers (e.g., EC2 instances) downstream
 
 + Internal (Private) ALB: Distributes traffic to targets within the same VPC, making it ideal for internal services. It does not have a public DNS name or public IP addresses.
 
++ Layer 7 (HTTP) Load Balancing: ALBs operate at the application layer (Layer 7) of the OSI model, enabling them to intelligently distribute incoming HTTP and HTTPS traffic to backend targets.
+
++ Load Balancing to Multiple HTTP Applications Across Machines (Target Groups): ALBs support routing traffic to multiple target groups, allowing you to direct requests to different sets of instances based on defined criteria, such as path patterns or hostnames.
+
++ Load Balancing to Multiple Applications on the Same Machine (e.g., Containers): ALBs can efficiently balance traffic to multiple applications running on the same instance, making them suitable for containerized environments where multiple services may coexist on a single host.
+
++ Support for HTTP/2 and WebSocket: ALBs offer native support for HTTP/2, enabling faster and more efficient communication between clients and servers. Additionally, they can handle WebSocket traffic, which is crucial for real-time communication applications like chat applications or online gaming.
+
++ Support for Redirects: ALBs can be configured to perform redirects, allowing you to seamlessly redirect HTTP requests to HTTPS for improved security or to different URLs as needed. This feature is particularly useful for enforcing HTTPS for secure communication between clients and servers.
+
 3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
 + External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
 
@@ -117,12 +134,5 @@ servers (e.g., EC2 instances) downstream
 + External (Public) GWLB: Routes traffic at the network layer (Layer 3) and operates with public IP addresses to direct traffic from clients over the internet to targets within a VPC.
 
 + Internal (Private) GWLB: Operates within the VPC and directs traffic internally, usually between services or instances within the same VPC. It does not have public IP addresses.
-
-#### Health Checks
-+  Health Checks are crucial for Load Balancers
-+ They enable the load balancer to know if instances it forwards traffic to 
-are available to reply to requests
-+ The health check is done on a port and a route (/health is common)
-+ If the response is not 200 (OK), then the instance is unhealthy
 
 #### Application Load Balancer (v2)
