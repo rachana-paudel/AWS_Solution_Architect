@@ -174,6 +174,12 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 
 <img src='images/ALB Routing.png' height='100%' width='100%' >
 
+##### Application Load Balancer (v2) Good to Know
++  Fixed hostname (XXX.region.elb.amazonaws.com)
++  The application servers don’t see the IP of the client directly
++  The true IP of the client is inserted in the header X-Forwarded-For
++ We can also get Port (X-Forwarded-Port) and proto (X-Forwarded-Proto)
+
 3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
 + External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
 
