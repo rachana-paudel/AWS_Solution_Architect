@@ -40,7 +40,7 @@ by adapting.
     + Distributes workload across multiple active instances.
     + Load balancers manage traffic distribution for scalability and redundancy.
 
-#### 
+#### Types of Scaling
 + Vertical Scaling:
     + Increasing the size of a single EC2 instance by upgrading its specifications.
     + Example: Upgrading from a small instance like t2.nano to a large one like u-12tb1.metal, which offers significantly more resources.
@@ -96,6 +96,27 @@ servers (e.g., EC2 instances) downstream
 + Cost-Efficient: While setting up your own load balancer might cost less initially, using ELB saves significant effort as AWS handles the operational overhead, resulting in potential long-term cost savings.
 
 + Integration with AWS Services: ELB seamlessly integrates with various AWS offerings and services such as EC2, EC2 Auto Scaling Groups, Amazon ECS, AWS Certificate Manager (ACM), CloudWatch, Route 53, AWS WAF (Web Application Firewall), and AWS Global Accelerator, simplifying the setup and management of complex architectures.
+
+#### Types of Load Balancer
+1. Classic Load Balancer (CLB) (vI-old generation)-2009:
++ External (Public) CLB: Routes incoming traffic from the internet to the instances in your VPC. It has a public DNS name and public IP addresses.
+
++ Internal (Private) CLB: Routes traffic between the instances within the same VPC. It does not have a public DNS name or public IP addresses and is accessible only within the VPC.
+
+2. Application Load Balancer (ALB)  (v2 - new generation) – 2016:
++ External (Public) ALB: Distributes incoming web traffic across multiple targets in multiple availability zones. It has a public DNS name and public IP addresses.
+
++ Internal (Private) ALB: Distributes traffic to targets within the same VPC, making it ideal for internal services. It does not have a public DNS name or public IP addresses.
+
+3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
++ External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
+
++ Internal (Private) NLB: Routes traffic to targets within the same VPC, often used for internal-facing services. It does not have a public IP address.
+
+4. Gateway Load Balancer (GWLB)-2020:
++ External (Public) GWLB: Routes traffic at the network layer (Layer 3) and operates with public IP addresses to direct traffic from clients over the internet to targets within a VPC.
+
++ Internal (Private) GWLB: Operates within the VPC and directs traffic internally, usually between services or instances within the same VPC. It does not have public IP addresses.
 
 #### Health Checks
 +  Health Checks are crucial for Load Balancers
