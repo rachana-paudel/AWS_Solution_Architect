@@ -219,14 +219,34 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 
 + Internal (Private) GWLB: Operates within the VPC and directs traffic internally, usually between services or instances within the same VPC. It does not have public IP addresses.
 
-Deployment of Third-Party Network Virtual Appliances: The Gateway Load Balancer enables you to deploy, scale, and manage a fleet of third-party network virtual appliances in AWS. These appliances can include firewalls, intrusion detection and prevention systems (IDPS), deep packet inspection (DPI) systems, and other similar network security or traffic management tools.
++ Deployment of Third-Party Network Virtual Appliances: The Gateway Load Balancer enables you to deploy, scale, and manage a fleet of third-party network virtual appliances in AWS. These appliances can include firewalls, intrusion detection and prevention systems (IDPS), deep packet inspection (DPI) systems, and other similar network security or traffic management tools.
 
-Layer 3 Operation (Network Layer): Unlike other AWS load balancers like the Application Load Balancer (ALB) or Network Load Balancer (NLB) which operate at Layer 7 (Application Layer) and Layer 4 (Transport Layer) respectively, the Gateway Load Balancer operates at Layer 3 (Network Layer), specifically dealing with IP packets.
++ Layer 3 Operation (Network Layer): Unlike other AWS load balancers like the Application Load Balancer (ALB) or Network Load Balancer (NLB) which operate at Layer 7 (Application Layer) and Layer 4 (Transport Layer) respectively, the Gateway Load Balancer operates at Layer 3 (Network Layer), specifically dealing with IP packets.
 
-Functions Combination: The Gateway Load Balancer combines several critical functions:
++ Functions Combination: The Gateway Load Balancer combines several critical functions:
 
-Transparent Network Gateway: It serves as a single entry and exit point for all traffic within your network infrastructure. This means all traffic flows through the load balancer, providing a centralized point for managing network traffic.
-Load Balancer: It distributes incoming traffic across multiple instances of your virtual appliances, ensuring efficient utilization and scalability of your network security and traffic management resources.
-Protocol Usage: The Gateway Load Balancer utilizes the GENEVE (Generic Network Virtualization Encapsulation) protocol on port 6081. GENEVE is a tunneling protocol used for encapsulating traffic between network devices.
+    + Transparent Network Gateway: It serves as a single entry and exit point for all traffic within your network infrastructure. This means all traffic flows through the load balancer, providing a centralized point for managing network traffic.
+    + Load Balancer: It distributes incoming traffic across multiple instances of your virtual appliances, ensuring efficient utilization and scalability of your network security and traffic management resources.
++ Protocol Usage: The Gateway Load Balancer utilizes the GENEVE (Generic Network Virtualization Encapsulation) protocol on port 6081. GENEVE is a tunneling protocol used for encapsulating traffic between network devices.
 
-#### Application Load Balancer (v2)
+#### Lab
++ launch ec2 -> number of instance is '2'
++ network setting : existing -> security group: launch -wizard-1
++ add user data
++ launch instance
++ view all instances
++ rename second instance as 'my second instance'
++ copy ipv4 address and paste in new tab
++ click second instance and copy ipv4 and paste we find change in ip at last
++ From left click load balancers-> create load balancer -> application load balancer, network and gateway load balancer is present
++ create application load balancer
++ load balancer name: demoALB -> scheme:  internet-facing -> ip address type: ipv4 -> in network mapping : check in every region provided
++ security group: create new SG -> SG name: demo-sg-load-balancer -> description: allow http into ALB
++ inbound rules form :anywhere -> traffic : all type -> create security group -> refresh -> choose demo as: demo-sg-load balancer (we created recently) and security group (we created recently )
++ Listener and routing : Protocol: http -> port : 80 -> default action : create target group
++ choose a target type : instances -> target group name : demo-tg-alb
++ version : http1 -> next
++ register target : both check -> include as pending below ( down of port :80) -> create target -> view load balancer
++ DemoALB -> copy DNS name in the side of name -> copy and paste in new tab -> if we refresh tab it keeps changing which is a result of ALB working
++ if we got to target group and target we can see both are healthy
++ if we stop instance of any one we can see only one ip address is shown after refreshing.
