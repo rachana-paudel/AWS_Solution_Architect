@@ -201,6 +201,19 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 
 <img src='images/network load balancer.png' height='100%' width='100%' >
 
+##### Target Group (EC2 Instances):
+
++ This target group is configured to route traffic to EC2 instances.
+    + Targets are specified by their instance IDs (e.g., i-1234567890abcdef0).
+    + The NLB forwards traffic to these instances based on the rules defined in the associated listener.
+
++ Target Group (IP Addresses):
+    + This target group is configured to route traffic to specific IP addresses.
+    + Targets are specified by their private IP addresses (e.g., 192.168.1.118, 10.0.4.21).
+    + These IP addresses must be private IPs within the VPC where the NLB resides.
+    + Like with instances, the NLB forwards traffic to these IP addresses based on the rules defined in the associated listener.
+
+
 4. Gateway Load Balancer (GWLB)-2020:
 + External (Public) GWLB: Routes traffic at the network layer (Layer 3) and operates with public IP addresses to direct traffic from clients over the internet to targets within a VPC.
 
