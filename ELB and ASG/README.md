@@ -183,6 +183,20 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 3. Network Load Balancer (NLB) (v2 - new generation) – 2017:
 + External (Public) NLB: Routes TCP, TLS, and UDP traffic from clients over the internet to a target, typically an instance in a VPC. It has a public IP address.
 
++ TCP and UDP Traffic Forwarding: NLB can distribute both TCP and UDP traffic, making it suitable for a wide range of applications and services.
+
++ High Request Handling Capacity: NLB is designed to handle millions of requests per second, making it ideal for high-traffic applications where scalability is critical.
+
++ Low Latency: NLB offers lower latency compared to Application Load Balancers (ALB), typically around 100 milliseconds, which can be advantageous for latency-sensitive applications.
+
++ Static IP per Availability Zone (AZ): NLB provides a static IP address per Availability Zone, allowing clients to connect to the same IP address regardless of which backend instance they are routed to. This simplifies DNS management and ensures consistent connectivity.
+
++ Support for Elastic IP: NLB supports assigning Elastic IP addresses, which can be useful for whitelisting specific IP addresses or for maintaining a stable IP address for your application.
+
++ Extreme Performance for TCP and UDP: NLB is optimized for extreme performance and is well-suited for handling TCP and UDP traffic at scale.
+
++ Not Included in AWS Free Tier: It's important to note that NLB usage is not covered under the AWS free tier, so charges will apply for usage.
+
 + Internal (Private) NLB: Routes traffic to targets within the same VPC, often used for internal-facing services. It does not have a public IP address.
 
 4. Gateway Load Balancer (GWLB)-2020:
