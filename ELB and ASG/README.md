@@ -199,6 +199,8 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 
 + Internal (Private) NLB: Routes traffic to targets within the same VPC, often used for internal-facing services. It does not have a public IP address.
 
+<img src='images/network load balancer.png' height='100%' width='100%' >
+
 4. Gateway Load Balancer (GWLB)-2020:
 + External (Public) GWLB: Routes traffic at the network layer (Layer 3) and operates with public IP addresses to direct traffic from clients over the internet to targets within a VPC.
 
