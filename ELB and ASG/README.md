@@ -229,7 +229,7 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
     + Load Balancer: It distributes incoming traffic across multiple instances of your virtual appliances, ensuring efficient utilization and scalability of your network security and traffic management resources.
 + Protocol Usage: The Gateway Load Balancer utilizes the GENEVE (Generic Network Virtualization Encapsulation) protocol on port 6081. GENEVE is a tunneling protocol used for encapsulating traffic between network devices.
 
-#### Lab
+#### Lab for ALB
 + launch ec2 -> number of instance is '2'
 + network setting : existing -> security group: launch -wizard-1
 + add user data
@@ -253,3 +253,55 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 + Click 'DemoALB' -> click on Listener -> click Http80-> Add rule -> name : DemoRule -> next -> add conditions -> rule condition types: path -> path: /error -> confirm ->next => actions-> action types: return fixed response -> response code :404 -> content type: text/plain -> response body : not found custom error -> next
 -> priority : 5 -> next-> create
 + lets test so got lo load balancer tab in the link add \error the result is not found custom error . It means its working
+
+#### For more detail
++ Launching EC2 Instances:
+
+    + Launched 2 instances.
+    + Assigned existing security group named "launch-wizard-1" to the instances.
+    + Added user data.
+    + Launched instances.
+
++ Viewing Instances:
+
+    + Accessed the list of all instances.
+
++ Renaming the Second Instance:
+
+    + Renamed the second instance as "my second instance".
+
++ Accessing Instances via IP Address:
+
+    + Copied the IPv4 address of both instances.
+    + Observed that the IP address changes for the second instance upon refreshing.
+
++ Creating Application Load Balancer (ALB):
+
+    + Navigated to load balancers and created an application load balancer.
+    + Named it "demoALB", configured it as internet-facing with IPv4 address type.
+    + Configured security group named "demo-sg-load-balancer" to allow HTTP traffic into the ALB.
+    + Added inbound rules to allow traffic from anywhere on all types.
+    + Configured listener for HTTP protocol on port 80 and created a target group named "demo-tg-alb".
+    + Registered both instances as targets in the target group.
+
++ Testing ALB:
+
+    + Copied the DNS name of the ALB and accessed it in a new tab.
+    + Observed that the DNS name kept changing upon refreshing due to ALB's load balancing functionality.
+    + Checked the target group to ensure both instances are healthy.
+
++ Adding a Rule to the ALB:
+
+    + Accessed the ALB settings and navigated to the listener.
+    + Added a new rule named "DemoRule" with condition type as path and path set to "/error".
+    + Configured the action to return a fixed response with a 404 error code and custom error message.
+    + Set the priority to 5 and created the rule.
+
++ Explanation:
+
++ By setting up an Application Load Balancer (ALB), incoming traffic can be distributed across multiple EC2 instances, improving availability and fault tolerance.
++ The added rule ("DemoRule") checks for a specific path ("/error") in the incoming requests.
++ If the path matches, the ALB responds with a custom 404 error message, demonstrating how the ALB can handle different types of requests and provide customized responses.
++ Testing the rule by accessing the ALB's URL with the "/error" path confirms that the ALB is correctly configured to return the custom error message when requested.
+
+#### Lab for NLB
