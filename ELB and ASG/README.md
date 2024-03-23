@@ -250,3 +250,6 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 + DemoALB -> copy DNS name in the side of name -> copy and paste in new tab -> if we refresh tab it keeps changing which is a result of ALB working
 + if we got to target group and target we can see both are healthy
 + if we stop instance of any one we can see only one ip address is shown after refreshing.
++ Click 'DemoALB' -> click on Listener -> click Http80-> Add rule -> name : DemoRule -> next -> add conditions -> rule condition types: path -> path: /error -> confirm ->next => actions-> action types: return fixed response -> response code :404 -> content type: text/plain -> response body : not found custom error -> next
+-> priority : 5 -> next-> create
++ lets test so got lo load balancer tab in the link add \error the result is not found custom error . It means its working
