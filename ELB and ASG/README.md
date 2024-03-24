@@ -304,4 +304,16 @@ Certainly! Application Load Balancers (ALBs) offer advanced routing capabilities
 + If the path matches, the ALB responds with a custom 404 error message, demonstrating how the ALB can handle different types of requests and provide customized responses.
 + Testing the rule by accessing the ALB's URL with the "/error" path confirms that the ALB is correctly configured to return the custom error message when requested.
 
-#### Lab for NLB
+#### Sticky Sessions (Session Affinity)
++ Sticky sessions, also known as session affinity, are a mechanism used in load balancing to ensure that a client's requests are always directed to the same backend server or instance. This is particularly useful in scenarios where maintaining session state is important, such as e-commerce websites where a user's shopping cart information needs to be consistently maintained.
+Here are some key points regarding sticky sessions:
+
++ Implementation: Sticky sessions can be implemented in various types of load balancers, including Classic Load Balancers (CLB), Application Load Balancers (ALB), and Network Load Balancers (NLB). The load balancer keeps track of the client's session and routes subsequent requests from that client to the same backend instance.
+
++ Cookie-Based Approach: In the case of CLB and ALB, sticky sessions are often implemented using cookies. When a client makes its first request to the load balancer, the load balancer adds a cookie to the response containing information about the chosen backend instance. Subsequent requests from the same client include this cookie, allowing the load balancer to route them to the correct backend instance.
+
++ Expiration Control: Both CLB and ALB allow you to control the expiration date of the cookie used for sticky sessions. This gives you flexibility in determining how long the session affinity should be maintained. Setting an appropriate expiration time is important to balance session persistence with backend instance load distribution.
+
++ Use Case: One common use case for sticky sessions is to ensure that users do not lose their session data. By consistently routing requests from the same client to the same backend instance, you can maintain session state without the need for complex distributed session management systems.
+
++ Load Imbalance: It's important to note that enabling sticky sessions can potentially lead to load imbalance across backend EC2 instances. Since requests from the same client are always directed to the same instance, heavily loaded instances may receive more traffic than others. This can result in uneven distribution of workload and may require careful monitoring and scaling of backend instances to maintain performance and availability.
