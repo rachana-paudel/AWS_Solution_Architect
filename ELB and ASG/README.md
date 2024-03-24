@@ -338,3 +338,16 @@ Cookie Names:
 
 #### Lab
 + click "my first target group" -> action : edit attributes ->click stickiness (from the bottom) -> choose stickiness type: Load balancer generated cookie -> stickiness duration : 1 day ->  state change
+
+Explanation :
++ Navigate to "My First Target Group": This likely means you're accessing a specific target group within your load balancer configuration. You may need to navigate through a dashboard or interface to find this option.
+
++ Edit Attributes: Once you're in the "My First Target Group" section, there should be an option or button to edit the attributes of this target group. Click on it to proceed.
+
++ Click Stickiness: Within the attributes editing interface, you'll likely find various settings you can adjust. Look for the stickiness option, which may be labeled as such or under a related category.
+
++ Choose Stickiness Type: Load Balancer Generated Cookie: Stickiness ensures that subsequent requests from the same client are consistently routed to the same backend server. In this step, you're selecting the type of stickiness mechanism you want to use. "Load balancer generated cookie" means that the load balancer will insert a cookie into the client's browser to track its session.
+
++ Stickiness Duration: 1 Day: This specifies how long the stickiness should persist for each client session. In this case, it's set to one day, meaning that once a client is assigned to a backend server, it will stick to that server for the duration of their session, up to one day.
+
++ State Change: This likely refers to saving or applying the changes you've made to the stickiness settings. Once you're satisfied with your selections, you'll typically need to click a button or perform an action to apply these changes and update the state of the configuration.
