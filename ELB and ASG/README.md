@@ -394,3 +394,30 @@ to be encrypted in transit (in-flight encryption)
 +  Public SSL certificates are issued by Certificate Authorities (CA)
 +  Comodo, Symantec, GoDaddy, GlobalSign, Digicert, Letsencrypt, etc… 
 +  SSL certificates have an expiration date (you set) and must be renewed
+
+#### Load Balancer -SSL Certificates
+1.  X.509 Certificate Usage:
+
++ Load balancers use X.509 certificates (SSL/TLS server certificates) to secure connections between clients and the load balancer.
+
+2. Certificate Management using ACM:
+
++ AWS Certificate Manager (ACM) provides a convenient way to manage SSL/TLS certificates for use with AWS services, including Load Balancers.
+
+3. Custom Certificates:
+
++ Users have the option to upload their own SSL/TLS certificates if they choose not to use ACM.
+
+4. HTTPS Listener:
+
++ When configuring HTTPS listeners on a load balancer, a default certificate must be specified.
++ Additionally, users have the option to add multiple certificates to support multiple domains, enhancing flexibility in handling different domains or subdomains.
+
+5. Server Name Indication (SNI):
+
++ Clients can utilize Server Name Indication (SNI) to specify the hostname they are attempting to reach. This allows for the use of multiple SSL certificates on the same IP address, facilitating hosting of multiple SSL-enabled websites on a single server instance.
+
+6. Security Policy:
+
++ Load balancers offer the ability to specify a security policy to support older versions of SSL/TLS for legacy clients.
+This allows users to configure the security policy according to their specific requirements, ensuring compatibility with older client systems while maintaining security standards.
