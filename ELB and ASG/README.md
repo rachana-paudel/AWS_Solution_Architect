@@ -383,3 +383,14 @@ Explanation :
     + Cross-Zone Load Balancing is disabled by default.
     + If enabled, there are no additional charges for inter AZ data transmission.
     + Similar to other types, you can choose to enable Cross-Zone Load Balancing based on your specific requirements.    
+
+#### SSL/TLS -Basics
+SSL/TLS - Basics 
++  An SSL Certificate allows traffic between your clients and your load balancer 
+to be encrypted in transit (in-flight encryption)
++  SSL refers to Secure Sockets Layer, used to encrypt connections
++  TLS refers to Transport Layer Security, which is a newer version
++  Nowadays, TLS certificates are mainly used, but people still refer as SSL 
++  Public SSL certificates are issued by Certificate Authorities (CA)
++  Comodo, Symantec, GoDaddy, GlobalSign, Digicert, Letsencrypt, etc… 
++  SSL certificates have an expiration date (you set) and must be renewed
