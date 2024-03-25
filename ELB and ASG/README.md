@@ -438,3 +438,26 @@ This allows users to configure the security policy according to their specific r
     + It's considered a "newer" protocol because it wasn't initially part of the SSL/TLS standard but was introduced later to address the need for virtual hosting of SSL-enabled sites.
     + SNI functionality is supported by newer generation load balancers like Application Load Balancer (ALB), Network Load Balancer (NLB), and CloudFront.
     + However, it's important to note that SNI is not supported by older generation load balancers like Classic Load Balancer (CLB).
+
+#### Lab
++ create new listener in ALB for ALB
++ choose protocol : HTTPS and port 443 by default
++ Add action : Forward group
++ Secure listener setting : Default SSL/TLS certificate : Import   to ACM
++ Similar process for NLB -> protocol : TLS 
+
+#### 
+Connection Draining (for Classic Load Balancer - CLB):
+
+This feature is named "Connection Draining" for Classic Load Balancer (CLB).
+Connection Draining allows the load balancer to complete any "in-flight" requests that are being processed by instances that are being de-registered or identified as unhealthy.
+It stops sending new requests to the EC2 instance that is being de-registered.
+Administrators can configure the duration for Connection Draining between 1 to 3600 seconds, with a default of 300 seconds. This setting determines the maximum time the load balancer will keep sending requests to the instance before considering it completely drained.
+Connection Draining can also be disabled by setting the value to 0.
+It's advisable to set a low value for Connection Draining if the requests being handled by the instances are short-lived or if you want to quickly remove instances from the load balancer rotation.
+Deregistration Delay (for Application Load Balancer - ALB & Network Load Balancer - NLB):
+
+This feature is named "Deregistration Delay" for Application Load Balancer (ALB) and Network Load Balancer (NLB).
+Similar to Connection Draining, Deregistration Delay allows time for in-flight requests to complete while an instance is being de-registered or marked as unhealthy.
+It also stops sending new requests to the de-registering instance.
+Administrators can specify the duration for Deregistration Delay, but it's referred to as "Deregistration Delay" and not "Connection Draining" for these newer load balancer types.
