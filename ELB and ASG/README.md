@@ -365,7 +365,9 @@ Explanation :
 
     <img src='images/cross load balancer.png' height='100%' width='100%' >
 
-#### Cross-Zone Load Balancing
+Notes: While clicking the DemoNLB and DEMOGLB and seeing the attribute we can edit cross-zone load balancing (enable or disable) but in case of ALB it is automatically enable and we cannot change directly from there.
+But if we go to actual target group from listener we can change from there.
+#### ELB Cross-Zone Load Balancing
 
 + Application Load Balancer (ALB):
     + Cross-Zone Load Balancing is enabled by default.
@@ -395,7 +397,7 @@ to be encrypted in transit (in-flight encryption)
 +  Comodo, Symantec, GoDaddy, GlobalSign, Digicert, Letsencrypt, etc… 
 +  SSL certificates have an expiration date (you set) and must be renewed
 
-#### Load Balancer -SSL Certificates
+#### Elastic Load Balancer -SSL Certificates
 1.  X.509 Certificate Usage:
 
 + Load balancers use X.509 certificates (SSL/TLS server certificates) to secure connections between clients and the load balancer.
