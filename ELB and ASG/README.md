@@ -364,3 +364,22 @@ Explanation :
     + This means that if the load balancer instance is in Availability Zone 1, it will only distribute traffic to instances within Availability Zone 1. Similarly, if it's in Availability Zone 2, it will only distribute traffic to instances within Availability Zone 2.
 
     <img src='images/cross load balancer.png' height='100%' width='100%' >
+
+#### Cross-Zone Load Balancing
+
++ Application Load Balancer (ALB):
+    + Cross-Zone Load Balancing is enabled by default.
+    + There are no additional charges for inter Availability Zone (AZ) data transmission.
+    + It's possible to disable Cross-Zone Load Balancing at the Target Group level if needed.
+
++ Network Load Balancer (NLB) & Gateway Load Balancer:
+
+    + Cross-Zone Load Balancing is disabled by default.
+    + If enabled, you will incur charges for inter AZ data transmission.
+    + You have the option to enable Cross-Zone Load Balancing if required, but be aware of the associated costs.
+
++ Classic Load Balancer:
+
+    + Cross-Zone Load Balancing is disabled by default.
+    + If enabled, there are no additional charges for inter AZ data transmission.
+    + Similar to other types, you can choose to enable Cross-Zone Load Balancing based on your specific requirements.    
