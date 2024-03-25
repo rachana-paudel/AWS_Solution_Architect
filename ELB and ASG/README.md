@@ -351,3 +351,16 @@ Explanation :
 + Stickiness Duration: 1 Day: This specifies how long the stickiness should persist for each client session. In this case, it's set to one day, meaning that once a client is assigned to a backend server, it will stick to that server for the duration of their session, up to one day.
 
 + State Change: This likely refers to saving or applying the changes you've made to the stickiness settings. Once you're satisfied with your selections, you'll typically need to click a button or perform an action to apply these changes and update the state of the configuration.
+
+#### Cross Load Balancing
++ With Cross-Zone Load Balancing:
+
+    + Each load balancer instance distributes requests evenly across all registered instances in all Availability Zones (AZ).
+    + This means that regardless of which AZ the instances are in, the load balancer will distribute traffic evenly among them.
+
++ Without Cross-Zone Load Balancing:
+
+    + Requests are distributed only among instances in the same AZ as the load balancer node.
+    + This means that if the load balancer instance is in Availability Zone 1, it will only distribute traffic to instances within Availability Zone 1. Similarly, if it's in Availability Zone 2, it will only distribute traffic to instances within Availability Zone 2.
+
+    <img src='images/cross load balancer.png' height='100%' width='100%' >
