@@ -421,3 +421,17 @@ to be encrypted in transit (in-flight encryption)
 
 + Load balancers offer the ability to specify a security policy to support older versions of SSL/TLS for legacy clients.
 This allows users to configure the security policy according to their specific requirements, ensuring compatibility with older client systems while maintaining security standards.
+
+#### SSL - Server Name Indication (SNI)
++ SNI (Server Name Indication):
+
+    + SNI is a protocol extension to the SSL/TLS protocol.
+    + It enables a client to indicate the hostname of the target server it's attempting to connect to during the initial SSL handshake.
+    + This allows a server to present the appropriate SSL certificate for the requested hostname, or return a default certificate if necessary.
+
++ Functionality and Limitations:
+
+    + SNI effectively solves the problem of loading multiple SSL certificates onto one web server to serve multiple websites.
+    + It's considered a "newer" protocol because it wasn't initially part of the SSL/TLS standard but was introduced later to address the need for virtual hosting of SSL-enabled sites.
+    + SNI functionality is supported by newer generation load balancers like Application Load Balancer (ALB), Network Load Balancer (NLB), and CloudFront.
+    + However, it's important to note that SNI is not supported by older generation load balancers like Classic Load Balancer (CLB).
