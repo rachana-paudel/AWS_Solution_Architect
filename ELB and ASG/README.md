@@ -367,6 +367,7 @@ Explanation :
 
 Notes: While clicking the DemoNLB and DEMOGLB and seeing the attribute we can edit cross-zone load balancing (enable or disable) but in case of ALB it is automatically enable and we cannot change directly from there.
 But if we go to actual target group from listener we can change from there.
+
 #### ELB Cross-Zone Load Balancing
 
 + Application Load Balancer (ALB):
