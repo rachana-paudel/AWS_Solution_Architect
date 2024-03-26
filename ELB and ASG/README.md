@@ -485,3 +485,27 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 #### <img src='images/asg.png' height='100%' width='100%' >
 
 #### <img src='images/asg load balancer.png' height='100%' width='100%' >
+
+#### Auto Scaling Group Attributes
++ A Launch Template (older “Launch Configurations” are deprecated)
++ AMI + Instance Type
++ EC2 User Data
++ EBS Volumes
++ Security Groups
++ SSH Key Pair
++ IAM Roles for your EC2 Instances
++ Network + Subnets Information
++ Load Balancer Information
++ Min Size / Max Size / Initial Capacity
++ Scaling Policies
+
+#### Auto Scaling - CloudWatch Alarms and Scaling
++ CloudWatch Alarms: CloudWatch alarms allow you to monitor various metrics related to your AWS resources, including EC2 instances. These metrics can include CPU utilization, memory usage, network traffic, and custom metrics that you define.
+
++ Scaling Policies: With Auto Scaling, you can define scaling policies that specify how the ASG should respond to changes in CloudWatch metrics. There are two types of scaling policies:
+
+    +  Scale-out Policies: These policies define actions to be taken when the monitored metric exceeds a certain threshold, indicating increased demand or load. For example, if the average CPU utilization across all instances in the ASG exceeds 70% for a specified period, you can configure a scale-out policy to add more instances to handle the load.
+
+    +  Scale-in Policies: Conversely, scale-in policies define actions to be taken when the monitored metric falls below a certain threshold, indicating decreased demand or load. For example, if the average CPU utilization across all instances in the ASG drops below 30% for a specified period, you can configure a scale-in policy to remove instances to save costs.
+
++ Metric Aggregation: When defining CloudWatch alarms for an ASG, metrics such as average CPU utilization are computed based on the overall performance of all instances in the ASG. This ensures that scaling decisions are made considering the collective load on the group rather than individual instances.
