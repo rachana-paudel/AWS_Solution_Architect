@@ -483,3 +483,5 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Overall, Auto Scaling Groups provide a flexible and cost-effective solution for managing the compute resources of your applications and ensuring they can efficiently handle fluctuating workloads while maintaining high availability and reliability.
 
 #### <img src='images/asg.png' height='100%' width='100%' >
+
+#### <img src='images/asg load balancer.png' height='100%' width='100%' >
