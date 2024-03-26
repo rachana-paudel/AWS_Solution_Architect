@@ -509,3 +509,5 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
     +  Scale-in Policies: Conversely, scale-in policies define actions to be taken when the monitored metric falls below a certain threshold, indicating decreased demand or load. For example, if the average CPU utilization across all instances in the ASG drops below 30% for a specified period, you can configure a scale-in policy to remove instances to save costs.
 
 + Metric Aggregation: When defining CloudWatch alarms for an ASG, metrics such as average CPU utilization are computed based on the overall performance of all instances in the ASG. This ensures that scaling decisions are made considering the collective load on the group rather than individual instances.
+
+#### <img src='images/asg cloudwatch.png' height='100%' width='100%' >
