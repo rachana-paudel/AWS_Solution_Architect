@@ -481,3 +481,5 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Cost-Effectiveness: While ASGs themselves are free to use, you only pay for the underlying EC2 instances and any associated resources (e.g., storage, data transfer). By automatically scaling the number of instances based on demand, ASGs help optimize costs by ensuring you're only paying for the resources you actually need at any given time.
 
 + Overall, Auto Scaling Groups provide a flexible and cost-effective solution for managing the compute resources of your applications and ensuring they can efficiently handle fluctuating workloads while maintaining high availability and reliability.
+
+#### <img src='images/asg.png' height='100%' width='100%' >
