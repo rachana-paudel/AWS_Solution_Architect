@@ -465,3 +465,19 @@ This allows users to configure the security policy according to their specific r
 Administrators can specify the duration for Deregistration Delay, but it's referred to as "Deregistration Delay" and not "Connection Draining" for these newer load balancer types.
 
 <img src='images/connection draining.png' height='100%' width='100%' >
+
+#### Auto Scaling Group
+
++ An Auto Scaling Group (ASG) is a feature provided by cloud computing platforms like Amazon Web Services (AWS) that allows you to automatically adjust the number of compute resources (usually EC2 instances) in response to changes in demand or traffic patterns. Here's a breakdown of its key functions and benefits:
+
++ Dynamic Scaling: ASGs automatically scale the number of EC2 instances in response to changes in demand. When there's increased traffic or load on your application, the ASG will add more instances to handle the workload. Conversely, when the demand decreases, it will remove instances to save costs.
+
++ Minimum and Maximum Capacity: You can specify a minimum and maximum number of instances that should be running at any given time. This ensures that you always have a baseline level of capacity to handle incoming requests and prevents excessive scaling beyond your requirements or budget.
+
++ Integration with Load Balancers: ASGs seamlessly integrate with load balancers, automatically registering newly launched instances and deregistering terminated instances. This ensures that incoming traffic is evenly distributed among the available instances, improving both performance and reliability.
+
++ Fault Tolerance and High Availability: ASGs enhance the fault tolerance of your infrastructure by automatically replacing failed or terminated instances. If an instance becomes unhealthy or is terminated for any reason, the ASG will launch a new instance to maintain the desired capacity and ensure uninterrupted service.
+
++ Cost-Effectiveness: While ASGs themselves are free to use, you only pay for the underlying EC2 instances and any associated resources (e.g., storage, data transfer). By automatically scaling the number of instances based on demand, ASGs help optimize costs by ensuring you're only paying for the resources you actually need at any given time.
+
++ Overall, Auto Scaling Groups provide a flexible and cost-effective solution for managing the compute resources of your applications and ensuring they can efficiently handle fluctuating workloads while maintaining high availability and reliability.
