@@ -526,3 +526,12 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Configure storage: 8 gb2
 + Advance details, add user data
 + create launch template
++ Go back to the previous tab at select template in  'Launch template' : select the template created recently and click next
++ Now we have to choose instance launch options
++ choose VPC and AZ
++ Instance type requirements : we can choose and override them. click on next
++ load balancing is optional and health check is also optional
++ click next
++ Group size maximum capacity :10
++ Scaling policies :none and next
++ create auto scaling group
