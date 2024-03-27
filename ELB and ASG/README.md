@@ -535,3 +535,5 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Group size maximum capacity :10
 + Scaling policies :none and next
 + create auto scaling group
++ We can edit details like desired and maximum capacity and instance :2
++ Inactivity history we can find new ec2 instance because we change instance from to 2 abd if I got to ALB it shows to ip address for 2 instance
