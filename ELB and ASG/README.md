@@ -511,3 +511,13 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Metric Aggregation: When defining CloudWatch alarms for an ASG, metrics such as average CPU utilization are computed based on the overall performance of all instances in the ASG. This ensures that scaling decisions are made considering the collective load on the group rather than individual instances.
 
 #### <img src='images/asg cloudwatch.png' height='100%' width='100%' >
+
+#### Lab for Auto Scaling Group
++ from the left side click auto scaling group
++ click on create auto scaling group
++ Name ASG : Demo ASG
++ for launch template, create a new launch template. Then name it as : MyDemoTemplate, and description : template
++ for AMI: Quick start and choose linux and AMI: Amazon Linux 2 AMI(HVM)-kernel 5.10, SSD volume type
++ Architecture 64-bit
++ instance type : t2.micro
++ key pair name : EC2 Tutorial
