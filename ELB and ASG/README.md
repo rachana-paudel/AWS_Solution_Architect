@@ -521,3 +521,8 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Architecture 64-bit
 + instance type : t2.micro
 + key pair name : EC2 Tutorial
++ In the network setting : subnet : Don't include in launch template
++ security group : launch-wizard-1
++ Configure storage: 8 gb2
++ Advance details, add user data
++ create launch template
