@@ -539,8 +539,17 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + Inactivity history we can find new ec2 instance because we change instance from to 2 abd if I got to ALB it shows to ip address for 2 instance
 
 #### Auto Scaling Groups - Scaling Policies
-Target Tracking Scaling:
++ Target Tracking Scaling:
 
 Target tracking scaling is a method of autoscaling where you set a target value for a specific metric, and AWS adjusts the number of instances in your Auto Scaling Group (ASG) to maintain that target.
 In your case, you want to keep the average CPU utilization of your ASG at around 40%. You create a target tracking scaling policy for CPU utilization with a target value of 40%.
 AWS Auto Scaling continuously monitors the CPU utilization across all instances in your ASG. If the average CPU utilization deviates from the target, Auto Scaling automatically adds or removes instances to bring the average CPU utilization back to the target value.
+
++ Simple/Step Scaling:
+
+Simple scaling, also known as step scaling, allows you to define specific scaling actions based on CloudWatch alarms.
+You create CloudWatch alarms for CPU utilization exceeding 70% and falling below 30%. These alarms trigger when the CPU utilization crosses the specified thresholds.
+Then, you configure simple scaling policies to respond to these alarms:
+When the CPU exceeds 70%, you add 2 instances to the ASG to handle the increased load.
+When the CPU falls below 30%, you remove 1 instance from the ASG to reduce resource consumption.
+These simple scaling policies provide a reactive approach to scaling, responding directly to sudden spikes or drops in CPU utilization.
