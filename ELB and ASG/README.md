@@ -567,3 +567,14 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
     + Scheduled Scaling Ahead: Preemptively scheduling scaling actions using AWS Auto Scaling. Adjusting the capacity of AWS resources before the forecasted changes in workload occur, ensuring optimal performance and cost efficiency.    
 
 #### <img src='images/predictive scaling.png' height='100%' width='100%' >    
+
+#### Good metrics to scale on
++ CPUUtilization: Average CPU 
+utilization across your instances
++ RequestCountPerTarget: to make sure 
+the number of requests per EC2 
+instances is stable
++ Average Network In / Out (if you’re 
+application is network bound)
++ Any custom metric (that you push 
+using CloudWatch)
