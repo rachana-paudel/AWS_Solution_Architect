@@ -560,3 +560,8 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
     + In your case, you anticipate increased demand at 5 pm on Fridays and want to proactively scale up your infrastructure to handle it.
     + You create a scheduled scaling action to increase the minimum capacity of your ASG to 10 instances at 5 pm on Fridays.
     + By increasing the minimum capacity, you ensure that your infrastructure is ready to handle the anticipated higher workload without delays or performance issues.
+
++ Predictive scaling    
+    + Continuous Load Forecasting: Utilizing services like Amazon Forecast to analyze historical usage data.
+
+    + Scheduled Scaling Ahead: Preemptively scheduling scaling actions using AWS Auto Scaling. Adjusting the capacity of AWS resources before the forecasted changes in workload occur, ensuring optimal performance and cost efficiency.    
