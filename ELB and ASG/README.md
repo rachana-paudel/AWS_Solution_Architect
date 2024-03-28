@@ -565,3 +565,5 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
     + Continuous Load Forecasting: Utilizing services like Amazon Forecast to analyze historical usage data.
 
     + Scheduled Scaling Ahead: Preemptively scheduling scaling actions using AWS Auto Scaling. Adjusting the capacity of AWS resources before the forecasted changes in workload occur, ensuring optimal performance and cost efficiency.    
+
+#### <img src='images/predictive scaling.png' height='100%' width='100%' >    
