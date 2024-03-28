@@ -553,3 +553,10 @@ Then, you configure simple scaling policies to respond to these alarms:
 When the CPU exceeds 70%, you add 2 instances to the ASG to handle the increased load.
 When the CPU falls below 30%, you remove 1 instance from the ASG to reduce resource consumption.
 These simple scaling policies provide a reactive approach to scaling, responding directly to sudden spikes or drops in CPU utilization.
+
++ Scheduled Scaling:
+
+Scheduled scaling allows you to anticipate changes in demand based on known usage patterns or expected events.
+In your case, you anticipate increased demand at 5 pm on Fridays and want to proactively scale up your infrastructure to handle it.
+You create a scheduled scaling action to increase the minimum capacity of your ASG to 10 instances at 5 pm on Fridays.
+By increasing the minimum capacity, you ensure that your infrastructure is ready to handle the anticipated higher workload without delays or performance issues.
