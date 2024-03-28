@@ -537,3 +537,10 @@ Administrators can specify the duration for Deregistration Delay, but it's refer
 + create auto scaling group
 + We can edit details like desired and maximum capacity and instance :2
 + Inactivity history we can find new ec2 instance because we change instance from to 2 abd if I got to ALB it shows to ip address for 2 instance
+
+#### Auto Scaling Groups - Scaling Policies
+Target Tracking Scaling:
+
+Target tracking scaling is a method of autoscaling where you set a target value for a specific metric, and AWS adjusts the number of instances in your Auto Scaling Group (ASG) to maintain that target.
+In your case, you want to keep the average CPU utilization of your ASG at around 40%. You create a target tracking scaling policy for CPU utilization with a target value of 40%.
+AWS Auto Scaling continuously monitors the CPU utilization across all instances in your ASG. If the average CPU utilization deviates from the target, Auto Scaling automatically adds or removes instances to bring the average CPU utilization back to the target value.
