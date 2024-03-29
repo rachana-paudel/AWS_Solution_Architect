@@ -599,5 +599,8 @@ period
 + Go to dynamic then edit and change group size like desired , minimum and maximum capacity -> update
 + Go to monitoring and click on EC2 the CPU utilization is zero because Ec2 instance is not doing anything
 + Go to instance management click instance and then click on connect and then connect, it will open linux command in new tab
-+ Go to that tab and write command for installing sress by "sudo amazon-linux-extras install epel -y" and hen " sudo yum install stress -y" and then stress -c 4
-+
++ Go to that tab and write command for installing sress by "sudo amazon-linux-extras install epel -y" and hen " sudo yum install stress -y" and then "stress -c 4"
++ We can now see the CPU utilization is high in monitoring
++ If we go to automatic scaling and click the target tracking policy and lets see its backend
++ If we go to cloudwatch service and go to alarm in left side
++ If cpu utilization < 28 for 15 datapoints within 15 minutes then we use target trackingdemoASF for Alarm low and if cpu utilization >40 for 3 datapoints within 3 minutes we use Alarmhigh
