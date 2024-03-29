@@ -585,7 +585,19 @@ the cooldown period (default 300 seconds)
 + During the cooldown period, the ASG will 
 not launch or terminate additional 
 instances (to allow for metrics to stabilize)
-+  Advice: Use a ready-to-use AMI to reduce 
++ Advice: Use a ready-to-use AMI to reduce 
 configuration time in order to be serving 
 request fasters and reduce the cooldown 
 period
+
+#### Lab for Automatic scaling for ASG
++ Go to automatic scaling
++ create scheduled action and fill the detail and create
++ predictive scaling option -> create predictive scaling option -> turn on scaling -> metrics : CPU utilization -> target utilization: 50% per instance -> create
++ for dynamic scaling policy : policy type: simple scaling -> we can take action as add or remove or set to and fit capacity units 
++ for target scaling in dynamic scaling -> we can set target value and then create
++ Go to dynamic then edit and change group size like desired , minimum and maximum capacity -> update
++ Go to monitoring and click on EC2 the CPU utilization is zero because Ec2 instance is not doing anything
++ Go to instance management click instance and then click on connect and then connect, it will open linux command in new tab
++ Go to that tab and write command for installing sress by "sudo amazon-linux-extras install epel -y" and hen " sudo yum install stress -y" and then stress -c 4
++
