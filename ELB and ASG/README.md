@@ -599,8 +599,62 @@ period
 + Go to dynamic then edit and change group size like desired , minimum and maximum capacity -> update
 + Go to monitoring and click on EC2 the CPU utilization is zero because Ec2 instance is not doing anything
 + Go to instance management click instance and then click on connect and then connect, it will open linux command in new tab
-+ Go to that tab and write command for installing sress by "sudo amazon-linux-extras install epel -y" and hen " sudo yum install stress -y" and then "stress -c 4"
++ Go to that tab and write command for installing stress by "sudo amazon-linux-extras install epel -y" and hen " sudo yum install stress -y" and then "stress -c 4"
 + We can now see the CPU utilization is high in monitoring
 + If we go to automatic scaling and click the target tracking policy and lets see its backend
 + If we go to cloudwatch service and go to alarm in left side
 + If cpu utilization < 28 for 15 datapoints within 15 minutes then we use target trackingdemoASF for Alarm low and if cpu utilization >40 for 3 datapoints within 3 minutes we use Alarmhigh
++ If we got back to cloud watch and reboot that instance it will show less cpu utilization
+
+#### Explanation
++ Go to automatic scaling:
+
+    + This step involves navigating to the automatic scaling configuration section of the AWS Management Console or the AWS CLI.
+
++ Create scheduled action and fill the details and create:
+
+    + Scheduled actions allow you to set specific times for scaling events, such as increasing or decreasing the number of instances in the ASG. You provide details such as the desired capacity, start and end time, recurrence, etc.
+
++ Predictive scaling option:
+
+    + Predictive scaling uses machine learning algorithms to forecast future demand and automatically adjust the capacity of the ASG to meet that demand.
+    + You turn on predictive scaling and select relevant metrics (e.g., CPU utilization) and set a target utilization (e.g., 50% per instance).
+
++ Dynamic scaling policy:
+
+    + Dynamic scaling policies allow the ASG to automatically adjust its capacity based on predefined conditions or metrics.
+    + You define the policy type (e.g., simple scaling), and specify actions to take (e.g., add or remove instances) based on conditions met.
+
++ Target scaling in dynamic scaling:
+
+    + Target scaling allows you to set specific target values for metrics (e.g., CPU utilization) and let the ASG automatically adjust its capacity to maintain those targets.
+
++ Update group size:
+
+    + You can update the desired, minimum, and maximum capacity of the ASG to reflect changes in workload requirements or resource availability.
+
++ Monitoring CPU utilization:
+
+    + You can monitor the CPU utilization of instances in the ASG through the EC2 dashboard or the CloudWatch service.
+    + Initially, CPU utilization may be low because instances are idle.
+
++ Install stress tool and increase CPU utilization:
+
+    + To simulate increased workload and CPU utilization, you install the stress tool on an instance and run stress tests.
+    + This will cause CPU utilization to spike, allowing you to observe the scaling actions taken by the ASG.
+
++ Understanding target tracking policy:
+
+    + Target tracking policies in CloudWatch Alarms define thresholds for metrics such as CPU utilization.
+    + For example, if CPU utilization falls below 28% for 15 consecutive data points within 15 minutes, it triggers a low CPU utilization alarm.
+
++ CloudWatch alarms for scaling events:
+
+    + You set up CloudWatch alarms based on defined thresholds for CPU utilization.
+    + If the thresholds are met, the alarms trigger scaling actions in the ASG.
+
++ Observing changes after instance reboot:
+
+    + Rebooting an instance may temporarily reduce CPU utilization, triggering scaling actions in the ASG as per the defined policies.
+
+By following these steps and understanding the concepts behind them, you can effectively configure automatic scaling for an Auto Scaling Group to dynamically adjust its capacity based on workload demands.    
