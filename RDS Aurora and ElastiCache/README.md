@@ -101,3 +101,18 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Not used for scaling: It's important to note that Multi-AZ deployment is primarily designed for high availability and disaster recovery purposes, rather than for scaling out read operations. For read scalability, you would typically use Read Replicas.
 
 + Read Replicas for Disaster Recovery: While Multi-AZ provides redundancy at the primary instance level, Read Replicas can also be configured with Multi-AZ for additional redundancy and disaster recovery capabilities at the read replica level.
+
+##### RDS from Single-AZ to Multi-AZ
++ Zero Downtime Operation: There's no need to stop the database during this operation. Users can continue to access the database as usual.
+
++ Modify Database Configuration: You initiate the process by clicking on the "modify" option for the database within the AWS Management Console or through the AWS CLI/API.
+
++ Snapshot Creation: Internally, RDS takes a snapshot of the existing database. This snapshot serves as a point-in-time backup of the database's current state.
+
++ Restoration in a New AZ: A new database instance is created and restored from the snapshot in a different Availability Zone (AZ). Availability Zones are physically separate data centers within a region that are engineered to be isolated from failures in other Availability Zones.
+
++ Synchronization: Once the new Multi-AZ database instance is up and running, synchronization is established between the original Single-AZ database and the new Multi-AZ database. This ensures that data remains consistent across both instances.
+
++ Failover Ready: After synchronization is complete and the Multi-AZ instance is fully caught up with the original database, it's ready to take over in case of a failure in the primary AZ. In Multi-AZ configuration, RDS automatically handles failover to the standby instance if the primary instance experiences issues.
+
++ Automatic Updates: From this point on, RDS manages ongoing updates and backups for both the primary and standby instances, ensuring high availability and durability for your database.
