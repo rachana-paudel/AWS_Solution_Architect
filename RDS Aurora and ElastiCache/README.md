@@ -75,3 +75,8 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Read replicas used for SELECT (read-only) statements: Read replicas are ideal for scenarios where you primarily need to perform read operations (SELECT statements) rather than write operations (INSERT, UPDATE, DELETE). In this use case, the reporting or analytics application likely only needs to read data from the database to generate reports or perform analysis, so utilizing a Read Replica is a suitable choice.
 
 <img src='images/replica usecase.png' height='100%' width='100%' > 
+
+##### RDS Read Replicas – Network Cost 
++ Network Cost Between AZs: Amazon Web Services (AWS) charges for data transfer between Availability Zones (AZs) within the same region. Whenever data moves from one AZ to another within the same region, there may be associated network costs.
+
++ RDS Read Replicas Within the Same Region: When you set up Read Replicas for your RDS instance within the same region, you typically don't incur additional network costs. This is because data replication between the primary instance and its replicas occurs within the same region and often within the same AZ. Since there's no data transfer between different AZs or regions, there's no additional fee for network data transfer.
