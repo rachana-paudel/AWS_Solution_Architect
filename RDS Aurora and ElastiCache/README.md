@@ -60,3 +60,5 @@
 + Applications must update the connection string to leverage read replicas: In order to take advantage of read replicas, the application must be configured to distribute read queries across both the primary instance and its read replicas. This typically involves updating the connection string used by the application to include information about the read replicas.
 
 Overall, utilizing read replicas in Amazon RDS can significantly improve the scalability, availability, and performance of your application's read operations, while also providing options for disaster recovery and maintenance.
+
+<img src='images/read replicas.png' height='100%' width='100%' > 
