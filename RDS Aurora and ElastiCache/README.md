@@ -82,3 +82,22 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + RDS Read Replicas Within the Same Region: When you set up Read Replicas for your RDS instance within the same region, you typically don't incur additional network costs. This is because data replication between the primary instance and its replicas occurs within the same region and often within the same AZ. Since there's no data transfer between different AZs or regions, there's no additional fee for network data transfer.
 
 <img src='images/rds network cost.png' height='100%' width='100%' > 
+
+##### RDS Multi AZ (Disaster Recovery)
++ RDS Master DB instance (AZ A): This represents your primary RDS database instance, situated in one Availability Zone (AZ). The primary instance handles both read and write operations from your application.
+
++ Application writes reads: Your application interacts with the primary RDS instance by performing both write and read operations.
+
++ SYNC replication: In Multi-AZ configuration, data from the primary RDS instance is synchronously replicated to a standby instance located in a different Availability Zone. This ensures that the data is redundantly stored and readily available in case of any failure.
+
++ One DNS name – automatic app failover to standby: AWS provides a single endpoint (DNS name) for your RDS database. This endpoint automatically directs your application's traffic to the primary instance. In the event of a failure, AWS will automatically redirect the traffic to the standby instance, ensuring seamless failover without requiring manual intervention from your applications.
+
++ Increase availability: The primary purpose of Multi-AZ deployment is to enhance the availability and reliability of your database. By maintaining a standby instance in a separate AZ, AWS ensures that your database remains accessible even if there is an outage affecting the primary AZ.
+
++ Failover in case of loss of AZ, loss of network, instance, or storage failure: Multi-AZ deployment guards against various failure scenarios such as loss of an entire AZ, network failures, instance failures, or storage failures. In any such event, AWS automatically initiates failover to the standby instance to minimize downtime and data loss.
+
++ No manual intervention in apps: Multi-AZ failover is fully automated by AWS. Your applications don't need to handle failover logic or make any changes to adapt to the failover process. AWS manages the failover seamlessly behind the scenes.
+
++ Not used for scaling: It's important to note that Multi-AZ deployment is primarily designed for high availability and disaster recovery purposes, rather than for scaling out read operations. For read scalability, you would typically use Read Replicas.
+
++ Read Replicas for Disaster Recovery: While Multi-AZ provides redundancy at the primary instance level, Read Replicas can also be configured with Multi-AZ for additional redundancy and disaster recovery capabilities at the read replica level.
