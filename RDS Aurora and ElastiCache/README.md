@@ -74,3 +74,4 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 
 + Read replicas used for SELECT (read-only) statements: Read replicas are ideal for scenarios where you primarily need to perform read operations (SELECT statements) rather than write operations (INSERT, UPDATE, DELETE). In this use case, the reporting or analytics application likely only needs to read data from the database to generate reports or perform analysis, so utilizing a Read Replica is a suitable choice.
 
+<img src='images/replica usecase.png' height='100%' width='100%' > 
