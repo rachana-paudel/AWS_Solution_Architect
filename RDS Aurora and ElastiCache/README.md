@@ -80,3 +80,5 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Network Cost Between AZs: Amazon Web Services (AWS) charges for data transfer between Availability Zones (AZs) within the same region. Whenever data moves from one AZ to another within the same region, there may be associated network costs.
 
 + RDS Read Replicas Within the Same Region: When you set up Read Replicas for your RDS instance within the same region, you typically don't incur additional network costs. This is because data replication between the primary instance and its replicas occurs within the same region and often within the same AZ. Since there's no data transfer between different AZs or regions, there's no additional fee for network data transfer.
+
+<img src='images/rds network cost.png' height='100%' width='100%' > 
