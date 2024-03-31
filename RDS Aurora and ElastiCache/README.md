@@ -38,4 +38,25 @@
 
 + Use Cases: This feature is particularly useful for applications with unpredictable workloads where storage requirements may fluctuate over time.
 
-+Compatibility: Storage Auto Scaling is supported across all RDS database engine types, including MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, and Amazon Aurora.
++ Compatibility: Storage Auto Scaling is supported across all RDS database engine types, including MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, and Amazon Aurora.
+
+##### RDS Read Replicas for read scalability
++ RDS Read Replicas for read scalability: Read Replicas in Amazon RDS (Relational Database Service) are copies of your primary database instance that allow you to offload read queries from your primary database. By distributing read traffic across multiple replicas, you can improve the read scalability of your application.
+
++ RDS DB instance: This refers to your primary RDS database instance, which handles both read and write operations.
+
++ RDS DB instance read replica: These are additional instances created from your primary RDS instance specifically for handling read queries. They replicate data from the primary instance asynchronously.
+
++ Application writes reads reads reads: This indicates that while the application is performing write operations (such as INSERT, UPDATE, DELETE), it's also performing multiple read operations.
+
++ ASYNC replication: Replication between the primary RDS instance and its read replicas is asynchronous. This means that changes made on the primary instance are not immediately reflected on the replicas. There might be a slight delay, so the read replicas are eventually consistent with the primary instance.
+
++ Up to 15 Read Replicas: Amazon RDS allows you to create up to 15 read replicas for a given primary database instance.
+
++ Within AZ, Cross AZ, or Cross Region: Read replicas can be created within the same Availability Zone (AZ) as the primary instance, in a different AZ within the same region, or even in a different region altogether for disaster recovery or geographical distribution purposes.
+
++ Replicas can be promoted to their own DB: If needed, a read replica can be promoted to become its own standalone database instance. This can be useful for scenarios such as scaling out or performing maintenance on the primary instance.
+
++ Applications must update the connection string to leverage read replicas: In order to take advantage of read replicas, the application must be configured to distribute read queries across both the primary instance and its read replicas. This typically involves updating the connection string used by the application to include information about the read replicas.
+
+Overall, utilizing read replicas in Amazon RDS can significantly improve the scalability, availability, and performance of your application's read operations, while also providing options for disaster recovery and maintenance.
