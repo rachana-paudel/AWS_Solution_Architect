@@ -116,3 +116,14 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Failover Ready: After synchronization is complete and the Multi-AZ instance is fully caught up with the original database, it's ready to take over in case of a failure in the primary AZ. In Multi-AZ configuration, RDS automatically handles failover to the standby instance if the primary instance experiences issues.
 
 + Automatic Updates: From this point on, RDS manages ongoing updates and backups for both the primary and standby instances, ensuring high availability and durability for your database.
+
+##### RDS Custom:
++ Managed Database with OS and Database Customization: Offers similar managed services for Oracle and Microsoft SQL Server databases but with additional customization options.
+
++ Full Administrative Access: Users have full administrative access to both the underlying OS and the database, allowing for deeper configuration, tuning, and customization.
+
++ Configuration and Patch Management: Users can configure settings, install patches, and enable native features directly within the OS and database environment.
+
++ Access to Underlying EC2 Instance: Users can access the underlying EC2 instance hosting the RDS database using SSH or AWS Systems Manager (SSM) Session Manager, providing direct access for administrative tasks.
+
++ Deactivation of Automation Mode: Users can deactivate the automation mode provided by RDS to perform their customizations. It's advisable to take a database snapshot before making significant changes to ensure data integrity.
