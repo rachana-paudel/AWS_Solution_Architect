@@ -62,3 +62,15 @@
 Overall, utilizing read replicas in Amazon RDS can significantly improve the scalability, availability, and performance of your application's read operations, while also providing options for disaster recovery and maintenance.
 
 <img src='images/read replicas.png' height='100%' width='100%' > 
+
+##### RDS Read Replicas Use Cases:
++ Production database handling normal load: You have a primary database instance in production that is currently managing the regular workload of your application.
+
++ Running a reporting application for analytics: You have a reporting or analytics application that needs to run complex queries and analytics tasks on the data in your database. These queries might be resource-intensive and could potentially impact the performance of your production application if run directly on the primary database instance.
+
++ Creating a Read Replica for the new workload: To offload the analytics workload from the primary instance and ensure that it doesn't affect the performance of your production application, you create a Read Replica of the primary database instance.
+
++ Production application remains unaffected: By directing the analytics workload to the Read Replica, you ensure that your production application continues to operate smoothly without any degradation in performance. The Read Replica handles the analytics queries separately, without impacting the primary instance.
+
++ Read replicas used for SELECT (read-only) statements: Read replicas are ideal for scenarios where you primarily need to perform read operations (SELECT statements) rather than write operations (INSERT, UPDATE, DELETE). In this use case, the reporting or analytics application likely only needs to read data from the database to generate reports or perform analysis, so utilizing a Read Replica is a suitable choice.
+
