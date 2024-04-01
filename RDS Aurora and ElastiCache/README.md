@@ -203,4 +203,18 @@ serve reads
 ##### Lab
 + create database using aurora by clicking standard create and MySQL from engine
 + In the bottom, available version: Aurora MySQL(some version or default)
-+ 
++ template: production
++ DB cluster identifier: database-2
++ master username: admin, and password
++ configuration storage configuration: configuration option:AUrora standard
++ We can edit instance configuration
++ we can also create aurora replica from availability and durability
++ compute resource: Don't connect to EC2 compute resource and network type: IPv4
++ create new security group and name is :demo-database-aurora
++ we have several option to change we can change them according to the need and create database.
++ The database created has role like regional cluster, write and read instance
++ we have now reader and writer instance endpoints
++ we can add more reader from action and create cross region read replica
++ we can create add replica auto scaling from action
++ policy name: ReadReplicaScalingPolicy, we can add cluster capacity detail
++ we can modify and delete aurora database
