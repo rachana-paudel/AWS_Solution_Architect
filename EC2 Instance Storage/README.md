@@ -309,6 +309,15 @@ do)
     + Over 90% savings possible by utilizing storage tiers and appropriate availability options.
     + EFS-IA and One Zone options help optimize costs while maintaining data availability and durability.
 
+#### Lab
++ firstly create a ec2 and security group inside it named : sg-ef-demo-> description : EFS Demo SG ->create security group-> security group name : efs-demo ->create security group
++ create EFS -> click on customize -> AZ: regional ->  enable automatic backups -> throughput mode : enhanced -> elastic is recommended -> next -> network : VPC -> mount target : efs-demo -> next -> File system policy : it is optional -> next -> create-> click on EFS we created 
++ launch instance -> name Instance A-> configure storage : o x file system : edit -> it ask to create subnet so create it from above ->launch instance -> launch another instance : Instance B 
++ search instance state :running -> go to security group in left -> inbound rule : security group is attached
++ click on 1 instance : connect -> ec2 instance connect
+
+
+
 
 
 
