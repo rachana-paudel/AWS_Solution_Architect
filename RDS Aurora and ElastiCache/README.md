@@ -145,3 +145,7 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Connectivity: Don't Connect to an EC2 compute resource
 + public access: yes
 + VPC SG(firewall): create new
++ New VPC SG name: demo-database-mysql
++ Database port: 3306
++ Database authentication options:password authentication
++ 
