@@ -127,3 +127,18 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Access to Underlying EC2 Instance: Users can access the underlying EC2 instance hosting the RDS database using SSH or AWS Systems Manager (SSM) Session Manager, providing direct access for administrative tasks.
 
 + Deactivation of Automation Mode: Users can deactivate the automation mode provided by RDS to perform their customizations. It's advisable to take a database snapshot before making significant changes to ensure data integrity.
+
+##### RDS Lab
++ Search for Amazon RDS and click on create database
++ Choose a database creation method: Standard create
++ Engine option : MySQL
++ version : MySQL 8..28
++ Template: production
++ Availability and durability: Single DB instance
++ Setting : Db instance identifier : database-1
++ Write password
++ Instance configuration : DB instance class : burstable classes and click on include previous generation classes
++ Storage type: General purpose SSD(gp2)
++ Allocated storage: 10
++ Storage autoscaling: enable
++ Maximum storage threshold: 1000 GiB
