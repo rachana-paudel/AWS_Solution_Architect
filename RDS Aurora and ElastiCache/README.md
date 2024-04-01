@@ -148,4 +148,4 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + New VPC SG name: demo-database-mysql
 + Database port: 3306
 + Database authentication options:password authentication
-+ 
++ Database option : initial database name: mydb and enable backup with backup period and perform other remaining action and create database
