@@ -142,3 +142,6 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Allocated storage: 10
 + Storage autoscaling: enable
 + Maximum storage threshold: 1000 GiB
++ Connectivity: Don't Connect to an EC2 compute resource
++ public access: yes
++ VPC SG(firewall): create new
