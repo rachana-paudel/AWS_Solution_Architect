@@ -186,3 +186,14 @@ serve reads
 + Support for Cross Region Replication
 
 <img src='images/aurora db cluster.png' height='100%' width='100%' >
+
+##### Features of Aurora
+• Automatic fail-over
+• Backup and Recovery
+• Isolation and security
+• Industry compliance
+• Push-button scaling
+• Automated Patching with Zero Downtime
+• Advanced Monitoring
+• Routine Maintenance
+• Backtrack: restore data at any point of time without using backups
