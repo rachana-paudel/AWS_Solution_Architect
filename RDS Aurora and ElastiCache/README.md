@@ -158,3 +158,4 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
     Result : new table is created
 + Similarly we can have some insert data to insert.    
 + we can create read replica create snapshot in the databse back to the tab
++ make sure to delete database if not in use for that click to modify, we find delete protection disable that and continue and click on apply immediately and modify db instance then we can delete from action
