@@ -184,3 +184,5 @@ MySQL (sub 10 ms replica lag)
 + Master + up to 15 Aurora Read Replicas 
 serve reads
 + Support for Cross Region Replication
+
+<img src='images/aurora db cluster.png' height='100%' width='100%' >
