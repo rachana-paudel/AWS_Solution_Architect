@@ -199,3 +199,8 @@ serve reads
 + Backtrack: restore data at any point of time without using backups
 
 <img src='images/aurora replicas.png' height='100%' width='100%' >
+
+##### Lab
++ create database using aurora by clicking standard create and MySQL from engine
++ In the bottom, available version: Aurora MySQL(some version or default)
++ 
