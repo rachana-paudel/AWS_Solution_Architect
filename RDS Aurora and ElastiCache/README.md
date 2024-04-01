@@ -149,3 +149,12 @@ Overall, utilizing read replicas in Amazon RDS can significantly improve the sca
 + Database port: 3306
 + Database authentication options:password authentication
 + Database option : initial database name: mydb and enable backup with backup period and perform other remaining action and create database
++ after that open new tab and search for sql electron click on sqlelectron-one single DB client for any relational DB and click on download GUI
++ click on sqlelctron-1.37.1.dmg and install it
++ we can change some rules we want
++ copy endpoint go to sqlelectron and click on add 
++ name :RDSDemo, database type: MySQL, server adrress: paste endpoint detail, user:admin, password : xxxxx, initial database/keysource:mydb and save this then click on connect
++ write: CREATE TABLE table_name (name varchar(20), first_name varchar(20));   
+    Result : new table is created
++ Similarly we can have some insert data to insert.    
++ we can create read replica create snapshot in the databse back to the tab
