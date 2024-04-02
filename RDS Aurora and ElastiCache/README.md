@@ -218,3 +218,23 @@ serve reads
 + we can create add replica auto scaling from action
 + policy name: ReadReplicaScalingPolicy, we can add cluster capacity detail
 + we can modify and delete aurora database
+
+<img src='images/aurora replica auto scaling.png' height='100%' width='100%' >
+
+##### Aurora - Custom Endpoints
+<img src='images/aurora custom endpoint.png' height='100%' width='100%' >
+
+##### Aurora Serverless
++ Aurora Serverless: This is a mode of Aurora where the database can automatically start up, shut down, and scale its compute capacity based on the application's needs. Unlike traditional Aurora, which requires you to provision and manage instances, Aurora Serverless handles the scaling and capacity management for you.
+
++ Shared storage Volume: In Aurora Serverless, the storage layer is shared across multiple instances. This allows for better resource utilization and scalability without sacrificing performance.
+
++ Proxy Fleet (managed by Aurora): Aurora Serverless uses a proxy fleet to manage connections to the database instances. The proxy fleet handles the connection pooling and routing of requests to the appropriate instances, providing a seamless experience for clients.
+
++ Automated database instantiation and auto-scaling based on actual usage: Aurora Serverless automatically creates and scales database instances based on the workload demands. It can scale up or down in response to changes in traffic, ensuring that you only pay for the resources you actually use.
+
++ Good for infrequent, intermittent, or unpredictable workloads: Aurora Serverless is well-suited for workloads that have variable demand patterns, as it can dynamically adjust its capacity to match the workload without manual intervention.
+
++ No capacity planning needed: With Aurora Serverless, you don't need to perform capacity planning or provisioning of instances. The service handles the infrastructure management, allowing you to focus on your application logic.
+
++ Pay per second, can be more cost-effective: Aurora Serverless charges you based on the resources consumed by your database, typically on a per-second basis. This can be more cost-effective compared to traditional provisioning models, especially for workloads with unpredictable usage patterns.
