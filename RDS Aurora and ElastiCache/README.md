@@ -238,3 +238,15 @@ serve reads
 + No capacity planning needed: With Aurora Serverless, you don't need to perform capacity planning or provisioning of instances. The service handles the infrastructure management, allowing you to focus on your application logic.
 
 + Pay per second, can be more cost-effective: Aurora Serverless charges you based on the resources consumed by your database, typically on a per-second basis. This can be more cost-effective compared to traditional provisioning models, especially for workloads with unpredictable usage patterns.
+
+##### Global Aurora
+Aurora Cross Region Read Replicas:
+Useful for disaster recovery: Cross-region read replicas provide redundancy and can serve as a backup in case of a disaster or outage in the primary region.
+Simple to put in place: Setting up cross-region read replicas is straightforward and can be easily configured through the AWS Management Console or APIs.
+Aurora Global Database:
+Primary Region (read/write): There's one primary region where read and write operations are performed.
+Secondary Regions (read-only): Up to five secondary regions can be configured, where data is replicated asynchronously from the primary region. Replication lag is typically less than 1 second.
+Read Replicas per Secondary Region: Each secondary region can have up to 16 read replicas, allowing for scalable read capacity across multiple regions.
+Decreases latency: By placing read replicas closer to the end-users in different geographic regions, Aurora global databases help reduce latency for read-heavy workloads.
+Promotion for Disaster Recovery: In the event of a disaster or primary region failure, promoting a secondary region to become the new primary region typically has a Recovery Time Objective (RTO) of less than 1 minute.
+Cross-region replication latency: Typical cross-region replication latency is less than 1 second, ensuring data consistency across regions.
