@@ -240,13 +240,40 @@ serve reads
 + Pay per second, can be more cost-effective: Aurora Serverless charges you based on the resources consumed by your database, typically on a per-second basis. This can be more cost-effective compared to traditional provisioning models, especially for workloads with unpredictable usage patterns.
 
 ##### Global Aurora
-Aurora Cross Region Read Replicas:
-Useful for disaster recovery: Cross-region read replicas provide redundancy and can serve as a backup in case of a disaster or outage in the primary region.
-Simple to put in place: Setting up cross-region read replicas is straightforward and can be easily configured through the AWS Management Console or APIs.
-Aurora Global Database:
-Primary Region (read/write): There's one primary region where read and write operations are performed.
-Secondary Regions (read-only): Up to five secondary regions can be configured, where data is replicated asynchronously from the primary region. Replication lag is typically less than 1 second.
-Read Replicas per Secondary Region: Each secondary region can have up to 16 read replicas, allowing for scalable read capacity across multiple regions.
-Decreases latency: By placing read replicas closer to the end-users in different geographic regions, Aurora global databases help reduce latency for read-heavy workloads.
-Promotion for Disaster Recovery: In the event of a disaster or primary region failure, promoting a secondary region to become the new primary region typically has a Recovery Time Objective (RTO) of less than 1 minute.
-Cross-region replication latency: Typical cross-region replication latency is less than 1 second, ensuring data consistency across regions.
++ Aurora Cross Region Read Replicas:
+    + Useful for disaster recovery: Cross-region read replicas provide redundancy and can serve as a backup in case of a disaster or outage in the primary region.
+    + Simple to put in place: Setting up cross-region read replicas is straightforward and can be easily configured through the AWS Management Console or APIs.
++ Aurora Global Database:
+    + Primary Region (read/write): There's one primary region where read and write operations are performed.
+    + Secondary Regions (read-only): Up to five secondary regions can be configured, where data is replicated asynchronously from the primary region. Replication lag is typically less than 1 second.
+    + Read Replicas per Secondary Region: Each secondary region can have up to 16 read replicas, allowing for scalable read capacity across multiple regions.
+    + Decreases latency: By placing read replicas closer to the end-users in different geographic regions, Aurora global databases help reduce latency for read-heavy workloads.
+    + Promotion for Disaster Recovery: In the event of a disaster or primary region failure, promoting a secondary region to become the new primary region typically has a Recovery Time Objective (RTO) of less than 1 minute.
+    + Cross-region replication latency: Typical cross-region replication latency is less than 1 second, ensuring data consistency across regions.
+
+##### Aurora Machine Learning
++ Aurora Machine Learning integrates ML predictions into applications using SQL queries.
++ Simplifies ML integration without requiring extensive ML expertise.
++ Optimized and secure integration with AWS ML services like SageMaker and Comprehend.
++ Supported use cases include fraud detection, ads targeting, sentiment analysis, and product recommendations.
++ Developers can leverage familiar SQL queries for seamless integration.
++ No prior ML experience necessary for implementation.
+
+##### RDS Backups
+
++ Automated Backups:
+
+    + Daily full backup of the database during the designated backup window.
+    + Transaction logs are backed up every 5 minutes by RDS.
+    + Enables point-in-time recovery from the oldest backup to 5 minutes ago.
+    + Retention period ranges from 1 to 35 days, with the option to set 0 to disable automated backups.
+
++ Manual DB Snapshots:
+
+    + Users can manually trigger snapshots as needed.
+    + Backups can be retained for any desired duration, allowing flexibility in backup management.
+
++ Consideration for Stopped RDS Instances:
+
+    + Storage costs still apply to stopped RDS instances.
+    + For extended periods of inactivity, it's recommended to take a snapshot and restore when required to avoid ongoing storage expenses.
