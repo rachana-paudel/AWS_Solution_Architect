@@ -277,3 +277,14 @@ serve reads
 
     + Storage costs still apply to stopped RDS instances.
     + For extended periods of inactivity, it's recommended to take a snapshot and restore when required to avoid ongoing storage expenses.
+
+##### Aurora Backups
++ Automated Backups:
+
+    + Aurora automatically creates backups with a retention period of 1 to 35 days.
+    + Point-in-time recovery is supported within this timeframe.
+
++ Manual DB Snapshots:
+
+    + Users can manually trigger snapshots according to their needs.
+    + Backup retention for manual snapshots can be set for any desired duration, offering flexibility in backup management.    
