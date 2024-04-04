@@ -300,3 +300,16 @@ serve reads
 + Store the backup file on Amazon S3
 + Restore the backup file onto a new Aurora cluster running MySQL
     
+##### Aurora Database Cloning
++ Aurora Database Cloning creates a new DB Cluster from an existing one quickly.
++ It's faster than traditional snapshot and restore methods.
++ The process utilizes a copy-on-write protocol.
++ Initially, the new cluster shares the same data volume as the original, avoiding immediate data copying.
++ Updates to the new cluster trigger additional storage allocation and data copying as needed.
++ This method is very fast and cost-effective.
++ It's ideal for creating staging databases from production databases without affecting production operations.
+
+
+
+
+
