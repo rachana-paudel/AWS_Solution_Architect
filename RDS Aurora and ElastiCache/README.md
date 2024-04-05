@@ -375,7 +375,7 @@ serve reads
     + Common strategies include using time-to-live (TTL) settings for cache entries, cache invalidation events triggered by database updates, or a combination of both.
     + By maintaining only relevant and current data in the cache, the system ensures data consistency and avoids serving stale information to the application.    
 
-
+<img src='images/elasticache.png' height='100%' width='100%' >
 
 
 
