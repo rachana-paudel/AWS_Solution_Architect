@@ -337,7 +337,16 @@ serve reads
 
     + Enable and send to CloudWatch Logs for longer retention.
 
-
+##### Amazon RDS Proxy:
++ Fully managed database proxy service for Amazon RDS.
++ Facilitates pooling and sharing of DB connections established with the database, enhancing efficiency.
++ Reduces stress on database resources like CPU and RAM and minimizes open connections and timeouts.
++ Operates in a serverless manner, automatically scaling, and is highly available across multiple Availability Zones (multi-AZ).
++ Reduces RDS and Aurora failover time by up to 66%.
++ Supports RDS databases including MySQL, PostgreSQL, MariaDB, MS SQL + Server, and Aurora databases for MySQL and PostgreSQL.
++ Typically requires no code changes for most applications.
++ Enforces IAM Authentication for database access and securely stores credentials in AWS Secrets Manager.
++ RDS Proxy is only accessible within the Virtual Private Cloud (VPC) and is not publicly accessible.
 
 
 
