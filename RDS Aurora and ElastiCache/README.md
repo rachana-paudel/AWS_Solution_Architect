@@ -349,6 +349,15 @@ serve reads
 + RDS Proxy is only accessible within the Virtual Private Cloud (VPC) and is not publicly accessible.
 
 
+##### Amazon ElastiCache Overview
++ Amazon ElastiCache Overview:
+    + ElastiCache is a managed caching service on AWS, analogous to RDS for relational databases.
+    + It provides managed Redis or Memcached, both being in-memory databases known for high performance and low latency.
+    + Helps alleviate the load on primary databases, particularly beneficial for read-intensive workloads.
+    + Facilitates making applications stateless by offloading session data and frequently accessed data to the cache.
+    + AWS manages OS maintenance, patching, optimizations, setup, configuration, monitoring, failure recovery, and backups.
+    + Using ElastiCache typically requires significant application code changes to implement caching logic and integrate with the cache.
+
 
 
 
