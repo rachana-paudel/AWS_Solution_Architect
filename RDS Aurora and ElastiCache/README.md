@@ -325,7 +325,7 @@ serve reads
 
     + Connect using IAM roles, not username/password.
     
-+    Security Groups:
++ Security Groups:
 
     + Control network access to RDS/Aurora DBs.
 
