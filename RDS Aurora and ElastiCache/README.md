@@ -309,6 +309,40 @@ serve reads
 + This method is very fast and cost-effective.
 + It's ideal for creating staging databases from production databases without affecting production operations.
 
+##### RDS and Aurora Security
++ At-rest encryption:
+
+    + Use AWS KMS to encrypt master and replicas.
+    + Master encryption required for replica encryption.
+    + Encrypt unencrypted DBs via snapshot restore.
+
++ In-flight encryption:
+
+    + Default TLS encryption.
+    + Utilize AWS TLS root certs client-side.
+
++ IAM Authentication:
+
+    + Connect using IAM roles, not username/password.
+    
++    Security Groups:
+
+    + Control network access to RDS/Aurora DBs.
+
++ SSH:
+
+    + Not available except on RDS Custom.
+
++ Audit Logs:
+
+    + Enable and send to CloudWatch Logs for longer retention.
+
+
+
+
+
+
+
 
 
 
