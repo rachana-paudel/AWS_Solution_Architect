@@ -391,5 +391,27 @@ application
 data and the user is 
 already logged in
 
+##### Elasticache - Redis vs Memcached
++ REDIS:
+
+    + Multi-AZ with Auto-Failover: Supports high availability across multiple Availability Zones with automatic failover.
+    + Read Replicas: Allows scaling of reads and ensures high availability.
+    + Data Durability: Achieved through Append-Only File (AOF) persistence mechanism.
+    + Backup and Restore: Features are available for data backup and restoration.
+    + Supports Sets and Sorted Sets: Data structures include sets and sorted sets, allowing for more complex data operations.
+
++ MEMCACHED:
+
+    + Multi-node for Partitioning: Supports partitioning of data across multiple nodes for scalability (sharding).
+    + No High Availability (Replication): Doesn't inherently support high availability through replication.
+    + Non-persistent: Data is not inherently persisted to disk.
+    + No Backup and Restore: Lacks built-in features for data backup and restoration.
+    + Multi-threaded Architecture: Utilizes a multi-threaded architecture for handling concurrent requests efficiently.
+
+
+
+
+
+
 
 
