@@ -378,7 +378,18 @@ serve reads
 <img src='images/elasticache.png' height='100%' width='100%' >
 
 
-
+##### ElastiCache Solution Architecture – User Session Store
++ User logs into any of the 
+application
++ The application writes 
+the session data into 
+ElastiCache
++ The user hits another 
+instance of our 
+application
++ The instance retrieves the 
+data and the user is 
+already logged in
 
 
 
