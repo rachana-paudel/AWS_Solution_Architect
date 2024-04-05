@@ -358,6 +358,23 @@ serve reads
     + AWS manages OS maintenance, patching, optimizations, setup, configuration, monitoring, failure recovery, and backups.
     + Using ElastiCache typically requires significant application code changes to implement caching logic and integrate with the cache.
 
+##### ElastiCache Solution Architecture -DB Cache
++ Workflow:
+
+    + Applications first query ElastiCache for data.
+    + If the data is not available in ElastiCache, the application retrieves it from the RDS database and then stores it in ElastiCache for future use.
+
++ Purpose:
+
+    + This setup helps to relieve the load on the RDS database by serving frequently accessed data from the cache, reducing the number of direct queries to the database.
+
++ Invalidation Strategy:
+
+    + An invalidation strategy is crucial to ensure that only the most current and up-to-date data is stored in the cache.
+    + This involves mechanisms to expire or invalidate cached data when it becomes outdated or when changes occur in the underlying database.
+    + Common strategies include using time-to-live (TTL) settings for cache entries, cache invalidation events triggered by database updates, or a combination of both.
+    + By maintaining only relevant and current data in the cache, the system ensures data consistency and avoids serving stale information to the application.    
+
 
 
 
