@@ -427,9 +427,14 @@ already logged in
 + For logs show or enable logs and next and create
 + we can click on the elasticache created recently
 + It shows some detail change we made
-+ 
 
 
+##### Elasticache- cache security
+ElastiCache is a web service provided by Amazon Web Services (AWS) for deploying, operating, and scaling in-memory data stores in the cloud. It supports two popular open-source in-memory data stores: Redis and Memcached. Here's a brief explanation of the security features mentioned:
+
++ IAM Authentication for Redis:
+    + ElastiCache supports using AWS Identity and Access Management (IAM) for authenticating to Redis clusters.
+    + This allows you to leverage IAM users and roles for authentication instead of using the Redis AUTH command with a password.
 
 
 
