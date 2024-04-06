@@ -408,7 +408,26 @@ already logged in
     + No Backup and Restore: Lacks built-in features for data backup and restoration.
     + Multi-threaded Architecture: Utilizes a multi-threaded architecture for handling concurrent requests efficiently.
 
-
+##### Lab
++ Search for Elasticache and get started
++ We can made both redis type or memcache type for now lets see for redis
++ Configuration : Design your own cache
++ creation method: cluster cache
++ cluster mode: disable
++ cluster info: disable
++ cluster name: democluster
++ location: aws cloud
++ auto follower: enable
++ perform cluster setting
++ subnet group: my-firs-subnet-group and then click on next
++ Encryption at rest: enable
++ If Encryption at transit: enable we can have access control
++ For backup: enable automatic backup or not
++ For maintenance: Maintenance window and auto upgrade mirror version and 
++ For logs show or enable logs and next and create
++ we can click on the elasticache created recently
++ It shows some detail change we made
++ 
 
 
 
