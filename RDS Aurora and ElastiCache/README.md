@@ -445,5 +445,11 @@ ElastiCache is a web service provided by Amazon Web Services (AWS) for deploying
     + This password is then required for authenticating with the Redis cluster using the Redis AUTH command.
     + It provides an additional layer of security on top of security groups.
 
++ SSL In-flight Encryption:
+    + ElastiCache supports SSL/TLS encryption for data in transit.
+    + This ensures that data sent between your application and the ElastiCache cluster is encrypted, protecting against eavesdropping and man-in-the-middle attacks.
 
++ Memcached SASL Authentication:
+    + Memcached in ElastiCache supports SASL-based authentication, which is an advanced feature.
+    + SASL (Simple Authentication and Security Layer) allows you to authenticate with Memcached clusters using various mechanisms, such as PLAIN or AWS Credentials.
 
