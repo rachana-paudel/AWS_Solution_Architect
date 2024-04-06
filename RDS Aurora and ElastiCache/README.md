@@ -440,6 +440,10 @@ ElastiCache is a web service provided by Amazon Web Services (AWS) for deploying
     + IAM policies are used to control access to ElastiCache API operations.
     + These policies do not control access to the data stored in the Redis or Memcached clusters themselves.
 
++ Redis AUTH:
+    + When creating a Redis cluster in ElastiCache, you can set a password or token.
+    + This password is then required for authenticating with the Redis cluster using the Redis AUTH command.
+    + It provides an additional layer of security on top of security groups.
 
 
 
