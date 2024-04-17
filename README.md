@@ -12,4 +12,6 @@
 
 ## <a href="./RDS Aurora and ElastiCache/README.md">Getting Started with RDS Aurora and ElastiCache</a>
 
+## <a href="./Route 53/README.md">Getting Started with Route 53</a>
+
 
