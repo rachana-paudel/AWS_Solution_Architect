@@ -14,3 +14,7 @@ into the machine IP addresses
 + Name Server: resolves DNS queries (Authoritative or Non-Authoritative)
 + Top Level Domain (TLD): .com, .us, .in, .gov, .org, …
 + Second Level Domain (SLD): amazon.com, google.com,
++ Zone file: Contains DNS records
++ Name Server: A server responsible for resolving DNS queries by translating domain names into IP addresses. They can be authoritative (containing the original zone file) or non-authoritative (caching DNS records from other name servers).
++ Top-Level Domain (TLD): These are the highest levels of the domain name hierarchy, e.g., .com, .org, .net, .edu, .gov, .uk, .in, etc. They are managed by various organizations and registrars.
++ Second-Level Domain (SLD): These are the domains directly before the TLD, such as "example" in example.com or "amazon" in amazon.com. They are unique and registered by organizations or individuals.
