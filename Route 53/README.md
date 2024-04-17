@@ -29,7 +29,7 @@ managed and Authoritative DNS
 + Authoritative = the customer (you)
 can update the DNS records
 + Route 53 is also a Domain Registrar
-+| Ability to check the health of your
++ Ability to check the health of your
 resources
 + The only AWS service which
 provides 100% availability SLA
