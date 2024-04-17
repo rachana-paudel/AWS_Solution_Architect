@@ -20,3 +20,16 @@ into the machine IP addresses
 + Second-Level Domain (SLD): These are the domains directly before the TLD, such as "example" in example.com or "amazon" in amazon.com. They are unique and registered by organizations or individuals.
 
 <img src="images/DNS terminology.png" height='100%' width='100%'>
+
+##### Amazon Route 53
++ A highly available, scalable, fully
+managed and Authoritative DNS
++ Authoritative = the customer (you)
+can update the DNS records
++ Route 53 is also a Domain Registrar
++| Ability to check the health of your
+resources
++ The only AWS service which
+provides 100% availability SLA
++ Why Route 53? 53 is a reference to
+the traditional DNS port
