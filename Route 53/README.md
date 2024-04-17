@@ -21,6 +21,8 @@ into the machine IP addresses
 
 <img src="images/DNS terminology.png" height='100%' width='100%'>
 
+<img src="images/DNS work.png" height='100%' width='100%'>
+
 ##### Amazon Route 53
 + A highly available, scalable, fully
 managed and Authoritative DNS
