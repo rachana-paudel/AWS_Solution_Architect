@@ -36,7 +36,7 @@ provides 100% availability SLA
 + Why Route 53? 53 is a reference to
 the traditional DNS port
 
-##### Route 53 record types
+##### Route 53 Record Types
 Route 53 – Record Types
 + A – maps a hostname to IPv4
 + AAAA – maps a hostname to IPv6
